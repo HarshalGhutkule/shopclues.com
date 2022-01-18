@@ -44,9 +44,9 @@
                     <a href=""><i class="fal fa-shopping-cart"></i></a>
                     <div class="hover_content">
                         <div id="quickCart">
-                            <div></div>
-                            <div></div>
-                            <div></div>
+                            <div class="nItems"></div>
+                            <div class="listItem"></div>
+                            <div class="btnContainer"></div>
                         </div>
                     </div>
                 </li>
@@ -54,10 +54,10 @@
                     <a href="">UserName</a>
                     <div></div>
                 </li>
-                <li>
+                <li id="signin">
                     <a href="">Sign-In</a>
-                    <div>
-                        <div></div>
+                    <div class="hover_content">
+                        <div id="userHeading"></div>
                         <ul>
                             <li></li>
                             <li></li>
@@ -80,793 +80,734 @@
             <ul>
                 <li id="madeIN">
                     <a href="">
-                        <img src="" alt="">
+                        <img src="https://images.shopclues.com/images/ui/madeinindia.png" alt="madeInIndia" width="54" height="54">
                     </a>
                 </li>
                 <li id="nav1" onmouseover="mouseoverNavigation()">
-                    <a href=""></a>
+                    <a href="">Mobiles & More</a>
                     <div class="menu_wrap">
                         <div class="ul_menu_block">
                             <div id="column_1" class="s_col">
                                 <ul>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
+                                    <li><strong>Smartphones & Tablets</strong></li>
+                                    <li>I KALL</li>
+                                    <li>Mi</li>
+                                    <li>Realme</li>
+                                    <li>Samsung</li>
+                                    <li>Vivo</li>
+                                    <li>Oppo</li>
+                                    <li>Apple</li>
+                                    <li>Techno</li>
+                                    <li>Infinix</li>
+                                    <li>Micromax</li>
+                                    <br><br>
+                                    <li><strong>Refurbished Smartphones</strong></li>
+                                    <br><br>
+                                    <li><strong>Refurbished Feature Phones</strong></li>
                                 </ul>
                             </div>
                             <div id="column_2" class="s_col">
                                 <ul>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
+                                    <li><strong>Feature Phones</strong></li>
+                                    <li>Micromax</li>
+                                    <li>I KALL</li>
+                                    <li>Nokia</li>
+                                    <li>MTR</li>
+                                    <li>Heemax</li>
+                                    <li>Karbonn</li>
+                                    <li>Kechaoda</li>
+                                    <li>Gfive</li>
+                                    <li>Blackbear</li>
+                                    <li>Samsung</li>
+                                    <br><br>
+                                    <li><strong>Gaming Consoles</strong></li>
+                                    <li>Gaming Titles</li>
+                                    <li>Gaming Accessories</li>
                                 </ul>
                             </div>
                             <div id="column_3" class="s_col">
                                 <ul>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
+                                    <li><strong>Bestsellers in Accessories</strong></li>
+                                    <li>Top Rated Accessories</li>
+                                    <li>Combos</li>
+                                    <li>Power Banks</li>
+                                    <li>Cases & Covers</li>
+                                    <li>Mobile Holders</li>
+                                    <li>Cables</li>
+                                    <li>Adapter & Chargers</li>
+                                    <li>Selfie Sticks</li>
+                                    <br><br>
+                                    <li><strong>Storage Devices</strong></li>
+                                    <li>Memory Cards</li>
+                                    <li>Pen Drives</li>
+                                    <li>External Hard disks</li>
                                 </ul>
                             </div>
                             <div id="column_4" class="s_col">
                                 <ul>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
+                                    <li><strong>Branded Accessories</strong></li>
+                                    <li>Tiitan</li>
+                                    <li>Toshiba</li>
+                                    <li>Sandisk</li>
+                                    <li>Philips</li>
+                                    <li>Portronics</li>
+                                    <li>Zebronics</li>
+                                    <li>Boat</li>
+                                    <li>Syska</li>
+                                    <li>JBL</li>
+                                    <br><br>
+                                    <li><strong>Audio Store</strong></li>
+                                    <li>Headphones & Earphones</li>
+                                    <li>Bluetooth Earphones</li>
+                                    <li>Bluetooth Speakers</li>
                                 </ul>
                             </div>
                             <div id="column_5" class="s_col">
                                 <ul>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
+                                    <li><strong>Laptops</strong></li>
+                                    <li>HP</li>
+                                    <li>Lenovo</li>
+                                    <li>Asus</li>
+                                    <li>Acer</li>
+                                    <li>Coconics</li>
+                                    <br><br>
+                                    <li><strong>Refurbished Laptops</strong></li>
+                                    <br><br>
+                                    <li><strong>Laptop Accessories</strong></li>
+                                    <li>Mouse</li>
+                                    <li>Keyboards</li>
+                                    <li>Laptop Bags</li>
+                                    <li>Laptop Skins</li>
+                                    <br><br>
+                                    <li><strong>Printers</strong></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </li>
                 <li id="nav2" onmouseover="mouseoverNavigation()">
-                    <a href=""></a>
+                    <a href="">MEN</a>
                     <div class="menu_wrap">
                         <div class="ul_menu_block">
                             <div id="column_1" class="s_col">
                                 <ul>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
+                                    <li><strong>Men's Clothing</strong></li>
+                                    <li>T-shirt</li>
+                                    <li>Shirt</li>
+                                    <li>Jeans</li>
+                                    <li>Cargos</li>
+                                    <li>Trousers</li>
+                                    <li>Track Pants</li>
+                                    <li>Shorts & 3/4th</li>
+                                    <li>Jackets</li>
+                                    <li>Ethnic Wear</li>
+                                    <li>Winter wear</li>
+                                    <li>Inner & Sleepwear</li>
+                                    <li>29K Store</li>
+                                    <br><br>
+                                    <li><strong>Sportswear</strong></li>
                                 </ul>
                             </div>
                             <div id="column_2" class="s_col">
                                 <ul>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
+                                    <li><strong>Footwear</strong></li>
+                                    <li>Casual Shoes</li>
+                                    <li>Sports Shoes</li>
+                                    <li>Formal Shoes</li>
+                                    <li>Sandals & Floaters</li>
+                                    <li>Slippers & Flip Flops</li>
+                                    <li>Loafers And Moccasins</li>
+                                    <li>Boots</li>
+                                    <li>Ethnic</li>
+                                    <li>Speciality Footwear</li>
+                                    <li>Shoe Care Kit & Accessories</li>
+                                    <li>Top Selling Brands</li>
                                 </ul>
                             </div>
                             <div id="column_3" class="s_col">
                                 <ul>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
+                                    <li><strong>Men's Watches</strong></li>
+                                    <li>Watch Combos</li>
+                                    <li>Couple Watches</li>
+                                    <li>Fastrack, Sonata & More</li>
+                                    <li>Budget Watches</li>
+                                    <li>Smart Watches</li>
+                                    <br><br>
+                                    <li><strong>Men's Jewellery</strong></li>
+                                    <li>Fashion Jewellery</li>
+                                    <li>Chains & Pendants</li>
+                                    <li>Precious Jewellery</li>
+                                    <li>Silver Jewellery</li>
+                                    <li>Coins & Collectibles</li>
                                 </ul>
                             </div>
                             <div id="column_4" class="s_col">
                                 <ul>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
+                                    <li><strong>Fragrances</strong></li>
+                                    <li>Fragrance Combos and Kits</li>
+                                    <li>Deodorants</li>
+                                    <br><br>
+                                    <li><strong>Grooming</strong></li>
+                                    <li>Beard & Moustache Care</li>
+                                    <li>Men's Shaving</li>
+                                    <li>Grooming Appliances</li>
+                                    <li>Bath Essentials</li>
+                                    <li>Oral Care</li>
+                                    <li>Skin Care</li>
+                                    <li>Hair Care</li>
+                                    <br><br>
+                                    <li><strong>Eyewear</strong></li>
+                                    <li>Sunglasses</li>
+                                    <li>Spectacle Frames</li>
                                 </ul>
                             </div>
                             <div id="column_5" class="s_col">
                                 <ul>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
+                                    <li><strong>Fashion Accessories</strong></li>
+                                    <li>Wallets</li>
+                                    <li>Belts</li>
+                                    <li>Socks</li>
+                                    <li>Caps</li>
+                                    <li>Winter Accessories</li>
+                                    <li>Men's Accessories Gift Sets</li>
+                                    <br><br>
+                                    <li><strong>Bags & luggage</strong></li>
+                                    <li>Backpacks & Laptop Bags</li>
+                                    <li>Gym Bags</li>
+                                    <li>Trolleys & Duffle Bags</li>
+                                    <li>Travel Accessories</li>
+                                    <li>Messenger Bags</li>
+                                    <li>Rucksacks</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </li>
                 <li id="nav3" onmouseover="mouseoverNavigation()">
-                    <a href=""></a>
+                    <a href="">WOMEN</a>
                     <div class="menu_wrap">
                         <div class="ul_menu_block">
                             <div id="column_1" class="s_col">
                                 <ul>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
+                                    <li><strong>Ethnic Wear</strong></li>
+                                    <li>Sarees</li>
+                                    <li>Kurtas & Kurtis</li>
+                                    <li>Lehengas & Party Gowns</li>
+                                    <li>Dress Material</li>
+                                    <li>Leggings & Churidar</li>
+                                    <li>Meia Store</li>
+                                    <br><br>
+                                    <li><strong>Western Wear</strong></li>
+                                    <li>Tops & Tees</li>
+                                    <li>Dresses</li>
+                                    <li>Jeans & Jeggings</li>
+                                    <li>Pants & Trousers</li>
+                                    <li>Skirts</li>
+                                    <li>Code Yellow Store</li>
                                 </ul>
                             </div>
                             <div id="column_2" class="s_col">
                                 <ul>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
+                                    <li><strong>Lingerie</strong></li>
+                                    <li>Bra</li>
+                                    <li>Panties</li>
+                                    <li>Sleepwear</li>
+                                    <li>Shapewear</li>
+                                    <li>Lingerie Sets</li>
+                                    <br><br>
+                                    <li><strong>Footwear</strong></li>
+                                    <li>Casual Shoes</li>
+                                    <li>Flats & Sandals</li>
+                                    <li>Women's Heels & Pumps</li>
+                                    <li>Women Sports Shoes</li>
+                                    <li>Wedges</li>
+                                    <li>Women's Bellies</li>
+                                    <li>Flip Flops & Slippers</li>
                                 </ul>
                             </div>
                             <div id="column_3" class="s_col">
                                 <ul>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
+                                    <li><strong>All Jewellery</strong></li>
+                                    <li>Fashion Jewellery</li>
+                                    <li>Pendant & Necklace Sets</li>
+                                    <li>Mangalsutra & Bangles</li>
+                                    <li>Earrings & Rings</li>
+                                    <li>Gold & Diamond Jewellery</li>
+                                    <li>Silver Jewellery</li>
+                                    <li>Coins & Collectibles</li>
+                                    <br><br>
+                                    <li><strong>Women's Watches</strong></li>
+                                    <li>Casual Wear Watches</li>
+                                    <li>Office Wear Watches</li>
+                                    <li>Branded Watches</li>
+                                    <li>Budget Watches</li>
+                                    <br><br>
+                                    <li><strong>Couple Watches</strong></li>
                                 </ul>
                             </div>
                             <div id="column_4" class="s_col">
                                 <ul>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
+                                    <li><strong>Beauty & Perfumes</strong></li>
+                                    <li>Skin Care</li>
+                                    <li>Make-Up</li>
+                                    <li>Hair Care</li>
+                                    <li>Personal Care & Grooming</li>
+                                    <li>Beauty Accessories</li>
+                                    <li>Grooming Appliances</li>
+                                    <li>Bath Essentials</li>
+                                    <li>Oral Care</li>
+                                    <li>Women Hygiene</li>
+                                    <br><br>
+                                    <li><strong>Fragrances</strong></li>
+                                    <li>Perfumes</li>
+                                    <li>Deodorants</li>
                                 </ul>
                             </div>
                             <div id="column_5" class="s_col">
                                 <ul>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
+                                    <li><strong>Fashion Accessories</strong></li>
+                                    <li>Socks & Stockings</li>
+                                    <li>Hair Accessories</li>
+                                    <li>Scarves & Stoles</li>
+                                    <li>Belts</li>
+                                    <li>Handkerchiefs</li>
+                                    <li>Shawls</li>
+                                    <br><br>
+                                    <li><strong>Bags & luggage</strong></li>
+                                    <li>Backpacks & Laptop Bags</li>
+                                    <li>Gym Bags</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </li>
                 <li id="nav4" onmouseover="mouseoverNavigation()">
-                    <a href=""></a>
+                    <a href="">HOME & KITCHEN</a>
                     <div class="menu_wrap">
                         <div class="ul_menu_block">
                             <div id="column_1" class="s_col">
                                 <ul>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
+                                    <li><strong>Kitchen & Dining</strong></li>
+                                    <li>Dinner sets</li>
+                                    <li>Cookware</li>
+                                    <li>Container Sets</li>
+                                    <li>Kitchen tools</li>
+                                    <li>Lunch box</li>
+                                    <li>Kitchen storage</li>
+                                    <br><br>
+                                    <li><strong>Kitchen Appliances</strong></li>
+                                    <li>Gas Cooktops</li>
+                                    <li>Juicer Mixer Grinders</li>
+                                    <li>Induction Cooktops</li>
+                                    <li>Kettles</li>
+                                    <li>Sandwich Makers</li>
+                                    <li>Blenders and choppers</li>
                                 </ul>
                             </div>
                             <div id="column_2" class="s_col">
                                 <ul>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
+                                    <li><strong>Home Furnishing</strong></li>
+                                    <li>Home Berry</li>
+                                    <li>Bedsheets</li>
+                                    <li>Curtains</li>
+                                    <li>Carpets & Rugs</li>
+                                    <li>Blankets</li>
+                                    <li>Towels</li>
+                                    <li>Furnishing Combos</li>
+                                    <br><br>
+                                    <li><strong>Bathroom & Sanitaryware</strong></li>
+                                    <li>Sanitaryware</li>
+                                    <li>Bathroom Fixtures</li>
+                                    <li>Bathing Utilities</li>
+                                    <li>Bathroom Mirror and Cabinets</li>
+                                    <li>Faucets and Jet sprays</li>
                                 </ul>
                             </div>
                             <div id="column_3" class="s_col">
                                 <ul>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
+                                    <li><strong>Lighting Solutions</strong></li>
+                                    <li>Led bulbs</li>
+                                    <li>Tubelights & Battens</li>
+                                    <li>Rechargeable Lights</li>
+                                    <li>Electrical</li>
+                                    <li>Panel & Ceiling Lights</li>
+                                    <br><br>
+                                    <li><strong>Tools & Hardware</strong></li>
+                                    <li>Hand Tools</li>
+                                    <li>Power Tools</li>
+                                    <li>Safety Equipments</li>
+                                    <br><br>
+                                    <li><strong>Home Improvement</strong></li>
+                                    <li>Cleaning Supplies</li>
+                                    <li>Laundry Organisation</li>
+                                    <li>Organisers</li>
                                 </ul>
                             </div>
                             <div id="column_4" class="s_col">
                                 <ul>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
+                                    <li><strong>Decor</strong></li>
+                                    <li>Clocks</li>
+                                    <li>Hookahs & Accessories</li>
+                                    <li>Wall Decor</li>
+                                    <li>Religion & Spirituality</li>
+                                    <li>Table Decoratives</li>
+                                    <li>Garden</li>
+                                    <br><br>
+                                    <li><strong>Furniture</strong></li>
+                                    <li>Inflatable Sofas</li>
+                                    <li>Storage Furniture</li>
+                                    <li>Bean Bags</li>
+                                    <li>Wall Shelves</li>
+                                    <li>Sofa Sets</li>
+                                    <li>Beds</li>
                                 </ul>
                             </div>
                             <div id="column_5" class="s_col">
                                 <ul>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
+                                    <li><strong>Home Appliance</strong></li>
+                                    <li>Water Purifiers</li>
+                                    <li>Irons</li>
+                                    <li>Emergency Lights</li>
+                                    <li>Sewing Machines</li>
+                                    <li>Vacuum Cleaners</li>
+                                    <li>Appliances Parts & Components</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </li>
                 <li id="nav5" onmouseover="mouseoverNavigation()">
-                    <a href=""></a>
+                    <a href="">APPLIANCES</a>
                     <div class="menu_wrap">
                         <div class="ul_menu_block">
                             <div id="column_1" class="s_col">
                                 <ul>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
+                                    <li><strong>TV & DTH</strong></li>
+                                    <li>Television</li>
+                                    <li>Full HD</li>
+                                    <li>HD Ready</li>
+                                    <li>Ultra HD</li>
+                                    <br><br>
+                                    <li><strong>Shop TV By Screen</strong></li>
+                                    <li>Below 32 Inch</li>
+                                    <li>32 Inch</li>
+                                    <li>39 Inch - 42 Inch</li>
+                                    <li>43 Inch & Above</li>
+                                    <br><br>
+                                    <li><strong>DTH</strong></li>
                                 </ul>
                             </div>
                             <div id="column_2" class="s_col">
                                 <ul>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
+                                    <li><strong>Large Home Appliances</strong></li>
+                                    <li>Air Conditioners</li>
+                                    <li>Split ACs</li>
+                                    <li>Window Acs</li>
+                                    <br><br>
+                                    <li><strong>Stabilizers</strong></li>
+                                    <br><br>
+                                    <li><strong>Air Coolers</strong></li>
+                                    <br><br>
+                                    <li><strong>Air Purifiers And De-Humidifiers</strong></li>
+                                    <br><br>
+                                    <li><strong>Refrigerators</strong></li>
+                                    <li>Single Door</li>
+                                    <li>Double Door</li>
+                                    <li>Side by Side</li>
                                 </ul>
                             </div>
                             <div id="column_3" class="s_col">
                                 <ul>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                </ul>
-                            </div>
-                            <div id="column_4" class="s_col">
-                                <ul>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                </ul>
-                            </div>
-                            <div id="column_5" class="s_col">
-                                <ul>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
+                                    <li><strong>Washing Machine</strong></li>
+                                    <li>Semi Automatic</li>
+                                    <li>Fully Automatic Top Load</li>
+                                    <li>Fully Automatic Front Load</li>
+                                    <br><br>
+                                    <li><strong>Geysers</strong></li>
+                                    <br><br>
+                                    <li><strong>Heaters</strong></li>
+                                    <br><br>
+                                    <li><strong>Inverters</strong></li>
+                                    <br><br>
+                                    <li><strong>Large Kitchen Appliances</strong></li>
+                                    <li>Chimney & Hoods</li>
+                                    <li>Microwave and Halogen Ovens</li>
+                                    <li>OTG</li>
+                                    <li>Dishwashers</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </li>
                 <li id="nav6" onmouseover="mouseoverNavigation()">
-                    <a href=""></a>
+                    <a href="">SPORTS & MORE</a>
                     <div class="menu_wrap">
                         <div class="ul_menu_block">
                             <div id="column_1" class="s_col">
                                 <ul>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
+                                    <li><strong>Diet Nutrition</strong></li>
+                                    <li>Whey Protein</li>
+                                    <li>Weight Gainers</li>
+                                    <li>Pre & Post Workout</li>
+                                    <li>Fat Burners</li>
+                                    <li>Vitamins & Minerals</li>
+                                    <li>Ayurveda & Herbal</li>
+                                    <br><br>
+                                    <li><strong>Healthcare</strong></li>
+                                    <li>Flu Care</li>
+                                    <li>Massage & Relaxation</li>
+                                    <li>Weighing Scales</li>
+                                    <li>BP Monitors</li>
+                                    <li>Supports & Elderly Care</li>
+                                    <li>General Wellness</li>
                                 </ul>
                             </div>
                             <div id="column_2" class="s_col">
                                 <ul>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
+                                    <li><strong>Fitness & Exercise</strong></li>
+                                    <li>Ab Exercisers</li>
+                                    <li>Home Gyms</li>
+                                    <li>Exercise Bikes</li>
+                                    <li>Fitness Accessories</li>
+                                    <li>Treadmills</li>
+                                    <li>Cardio Equipments</li>
+                                    <br><br>
+                                    <li><strong>Sports</strong></li>
+                                    <li>Cricket Bats</li>
+                                    <li>Footballs</li>
+                                    <li>Badminton Racquets</li>
+                                    <li>Table Tennis</li>
+                                    <li>Basketball</li>
+                                    <li>Swimming & Water Sports</li>
                                 </ul>
                             </div>
                             <div id="column_3" class="s_col">
                                 <ul>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
+                                    <li><strong>Car Accessories & Electronics</strong></li>
+                                    <li>Perfumes & Fresheners</li>
+                                    <li>Dashboard Accessories</li>
+                                    <li>Sun Shades</li>
+                                    <li>Car Body Covers</li>
+                                    <li>Door & Bumper Guards</li>
+                                    <li>Car Electronics</li>
+                                    <br><br>
+                                    <li><strong>Bike Accessories & more</strong></li>
+                                    <li>Bike Body Covers</li>
+                                    <li>Riding Gear</li>
+                                    <li>Helmets</li>
+                                    <li>Bike Locks & Alarm Systems</li>
+                                    <li>Car & Bike Care</li>
+                                    <li>Tools & Oils</li>
                                 </ul>
                             </div>
                             <div id="column_4" class="s_col">
                                 <ul>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
+                                    <li><strong>Beauty & Perfumes</strong></li>
+                                    <li>Skin Care</li>
+                                    <li>Make-Up</li>
+                                    <li>Hair Care</li>
+                                    <li>Personal Care & Grooming Products</li>
+                                    <li>Beauty Accessories</li>
+                                    <br><br>
+                                    <li><strong>Grooming</strong></li>
+                                    <li>Fragrance Combos and Kits</li>
+                                    <li>Beard & Moustache Care</li>
+                                    <li>Men's Shaving</li>
+                                    <li>Grooming Appliances</li>
+                                    <li>Bath Essentials</li>
+                                    <li>Oral Care</li>
                                 </ul>
                             </div>
                             <div id="column_5" class="s_col">
                                 <ul>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
+                                    <li><strong>Daily Needs & Essentials</strong></li>
+                                    <li>Food & Beverages</li>
+                                    <li>Household Supplies</li>
+                                    <li>Pet Suplies</li>
+                                    <li>Regional Sweets and snacks</li>
+                                    <li>Stationery</li>
+                                    <li>Books</li>
+                                    <br><br>
+                                    <li><strong>Gift Cards</strong></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </li>
                 <li id="nav7" onmouseover="mouseoverNavigation()">
-                    <a href=""></a>
+                    <a href="">ESSENTIALS</a>
                     <div class="menu_wrap">
                         <div class="ul_menu_block">
                             <div id="column_1" class="s_col">
                                 <ul>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
+                                    <li><strong>Food and Beverage</strong></li>
+                                    <li>Oils & Vinegars</li>
+                                    <li>Pastas & Noodles</li>
+                                    <li>Coffee & Tea</li>
+                                    <li>Cakes Biscuits & Chips</li>
+                                    <li>Dry Fruits Nuts & Seeds</li>
+                                    <li>Jams Honey & Spreads</li>
+                                    <li>Mouth Freshners & Digestives</li>
+                                    <li>Ready to cook</li>
+                                    <li>Sauces Dips & Pickles</li>
+                                    <br><br>
+                                    <li><strong>Grocery & Staples</strong></li>
+                                    <li>Rice & Flours</li>
+                                    <li>Pulses</li>
+                                    <li>Sugar & Jaggery</li>
                                 </ul>
                             </div>
                             <div id="column_2" class="s_col">
                                 <ul>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
+                                    <li><strong>Household Supplies</strong></li>
+                                    <li>Laundry and Detergents</li>
+                                    <li>Disposables</li>
+                                    <li>Pooja Essentials</li>
+                                    <li>Repellents & Devices</li>
+                                    <br><br>
+                                    <li><strong>Ayurveda & Herbal</strong></li>
+                                    <br><br>
+                                    <li><strong>Flu Care</strong></li>
+                                    <br><br>
+                                    <li><strong>Medical Equipment & Accessories</strong></li>
+                                    <br><br>
+                                    <li><strong>Nutrition & Supplements</strong></li>
+                                    <li>Ayurveda & Herbal</li>
+                                    <li>Family Nutrition</li>
+                                    <li>Vitamins and Minerals</li>
                                 </ul>
                             </div>
                             <div id="column_3" class="s_col">
                                 <ul>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
+                                    <li><strong>Personal Care and Grooming</strong></li>
+                                    <li>Men's Grooming</li>
+                                    <li>Feminine Hygiene</li>
+                                    <li>Oral Care</li>
+                                    <li>Hair Care</li>
+                                    <li>Fragrances</li>
+                                    <br><br>
+                                    <li><strong>Baby Care</strong></li>
+                                    <li>Baby Food</li>
+                                    <li>Bath & Skin Care</li>
+                                    <li>Diapers & Wipes</li>
+                                    <li><strong>Pet Supplies</strong></li>
                                 </ul>
                             </div>
                             <div id="column_4" class="s_col">
                                 <ul>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                </ul>
-                            </div>
-                            <div id="column_5" class="s_col">
-                                <ul>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
+                                    <li><strong>Top Brands</strong></li>
+                                    <br><br>
+                                    <li><strong>Himalaya</strong></li>
+                                    <br><br>
+                                    <li><strong>Cadbury</strong></li>
+                                    <br><br>
+                                    <li><strong>Veet</strong></li>
+                                    <br><br>
+                                    <li><strong>Pharma</strong></li>
+                                    <li>Ayurveda</li>
+                                    <li>Pain Relief</li>
+                                    <li>Sexual Wellness</li>
+                                    <li>Homeopathy</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </li>
                 <li id="nav8" onmouseover="mouseoverNavigation()">
-                    <a href=""></a>
+                    <a href="">OFFERS</a>
                     <div class="menu_wrap">
                         <div class="ul_menu_block">
                             <div id="column_1" class="s_col">
                                 <ul>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
+                                    <li><strong>All Offers</strong></li>
+                                    <br><br>
+                                    <li><strong>Kotra Top Sellers</strong></li>
+                                    <br><br>
+                                    <li><strong>Season Essentials</strong></li>
+                                    <li>Womens Tops & Skirts</li>
+                                    <li>FlipFlops</li>
+                                    <li>Mens Shorts</li>
+                                    <br><br>
+                                    <li><strong>Kitchen Essentials</strong></li>
+                                    <br><br>
+                                    <li><strong>Popular Categories</strong></li>
+                                    <li>Women Ethnic</li>
+                                    <li>Mens Tshirt</li>
+                                    <li>Watches</li>
+                                    <li>Mens Footwear</li>
+                                    <li>Women Western</li>
+                                    <li>Home Furnishing</li>
                                 </ul>
                             </div>
                             <div id="column_2" class="s_col">
                                 <ul>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
+                                    <li><strong>Wholesale</strong></li>
+                                    <li>Mobile and Laptop Accessories</li>
+                                    <li>Fashion</li>
+                                    <li>Home & Kitchen</li>
+                                    <li>Footwear</li>
+                                    <br><br>
+                                    <li><strong>Featured Brands</strong></li>
+                                    <li>Stylogue</li>
+                                    <li>Ikall</li>
+                                    <li>eglob</li>
+                                    <li>Walltola</li>
+                                    <li>Seagate HD</li>
+                                    <li>DCH</li>
                                 </ul>
                             </div>
                             <div id="column_3" class="s_col">
                                 <ul>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
+                                    <li><strong>New Arrivals</strong></li>
+                                    <li>Lifestyle</li>
+                                    <li>Home & Living</li>
+                                    <li>Electronic</li>
+                                    <li>Daily Utility</li>
+                                    <br><br>
+                                    <li><strong>Explore Our Stores</strong></li>
+                                    <li>Saree Fest</li>
+                                    <li>Watch Carnival</li>
+                                    <li>Lighting Shoppe</li>
+                                    <li>Jeans Fest</li>
+                                    <li>Mobile Accessories</li>
+                                    <li>Bed Sheets</li>
                                 </ul>
                             </div>
                             <div id="column_4" class="s_col">
                                 <ul>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
+                                    <li><strong>Shop By Price</strong></li>
+                                    <li>Under 99</li>
+                                    <li>Under 199</li>
+                                    <li>Under 249</li>
+                                    <li>Under 349</li>
+                                    <br><br>
+                                    <li><strong>Shop By Discount</strong></li>
+                                    <li>Upto 25% Off</li>
+                                    <li>Upto 50% Off</li>
+                                    <li>Upto 60% Off</li>
+                                    <li>Upto 80% Off</li>
                                 </ul>
                             </div>
                             <div id="column_5" class="s_col">
                                 <ul>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
+                                    <li><strong>Buy More Save More</strong></li>
+                                    <li>Ethnic Wear Combo</li>
+                                    <li>Men Combo</li>
+                                    <li>Watch Combo</li>
+                                    <li>Footwear Combo</li>
+                                    <br><br>
+                                    <li><strong>Best Offers</strong></li>
+                                    <li>Korean Avenue</li>
+                                    <li>Refer & Earn</li>
+                                    <li>Wholesale</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </li>
                 <li id="nav9" onmouseover="mouseoverNavigation()">
-                    <a href=""></a>
-                    <div class="menu_wrap">
-                        <div class="ul_menu_block">
-                            <div id="column_1" class="s_col">
-                                <ul>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                </ul>
-                            </div>
-                            <div id="column_2" class="s_col">
-                                <ul>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                </ul>
-                            </div>
-                            <div id="column_3" class="s_col">
-                                <ul>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                </ul>
-                            </div>
-                            <div id="column_4" class="s_col">
-                                <ul>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                </ul>
-                            </div>
-                            <div id="column_5" class="s_col">
-                                <ul>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                    <a href="">GLOBAL SHOPPING</a>
                 </li>
-                
             </ul>
         </div>
     </div>
