@@ -76,6 +76,7 @@ body {
     position: relative;
     z-index: 1;
     transition: all .2s ease-in-out;
+    top: -22px;
 
 }
 
@@ -93,6 +94,7 @@ body {
     color: #fffcfb;
     font-size: 15px;
     font-weight: 600;
+    top: 30px;
 }
 
 #sellListbtm {
@@ -210,16 +212,23 @@ body {
     margin: 0 auto;
     min-width: 980px;
     height: 100%;
-    padding: 0px 20px;
     position: relative;
     border: 1px solid black;
+}
+
+#wrapper>ul {
+    margin-top: -0.2%;
 }
 
 .main_navigation #wrapper ul > li {
     list-style: none;
     display: inline-block;
     vertical-align: top;
-    border: 1px solid red;
+}
+
+#madeIN {
+    height: 43px;
+    margin-top: -0.5%;
 }
 
 #madeIN>a>img {
@@ -238,24 +247,22 @@ body {
 }
 
 .main_navigation .menu_wrap {
-    /* position: absolute; */
+    position: absolute;
     padding: 0;
-    /* visibility: hidden; */
     top: 130%;
-    width: 100%;
+    width: 75%;
     min-height: 400px;
     margin: 0 auto;
     left: 0;
     right: 0;
-    z-index: 99999;
-    /* opacity: 0; */
+    /* z-index: 99999; */
     text-align: left;
     background: #fff;
     transition: all .2s ease-in-out;
-    -moz-box-shadow: 0px 9px 27px 0px rgba(0,0,0,0.23);
-    box-shadow: 0px 9px 27px 0px rgb(0 0 0 / 23%);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-top: none;
     border: 1px solid #e8e8e8;
+    display: none;
 }
 
 .menu_wrap, .ul_menu_block, .s_col {
@@ -269,6 +276,8 @@ body {
 
 .main_navigation .menu_wrap .ul_menu_block ul {
     list-style: none;
+    font-size: 12px;
+    line-height: 24px;
 }
 
 .main_navigation .menu_wrap .ul_menu_block .s_col {
@@ -280,4 +289,8 @@ body {
 li {
     display: list-item;
     text-align: -webkit-match-parent;
+}
+
+#nav1 {
+    top: -10px;
 }
