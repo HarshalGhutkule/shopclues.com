@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="styles/navbar.css">
 </head>
 <body>
+
+    <!-- header -> present above dropdown menu option -->
+
     <div class="header">
         <div id="sellList">
             <ul>
@@ -18,17 +21,26 @@
                 <li></li>
             </ul>
         </div>
+
+        <!-- website logo -->
+
         <div id="logo">
             <a href="">
                 <img src="https://images.shopclues.com/images/ui/shopclues_logo@2x.png" alt="logo">
             </a>
         </div>
+
+        <!-- search box -->
+
         <div id="searchBar">
             <span>
                 <input type="text" placeholder="What is on your mind today?">
                 <button class="srch_btn">Search</button>
             </span>
         </div>
+
+        <!-- login - cart - wishlist - location options -->
+
         <div id="sellListbtm">
             <ul>
                 <li>
@@ -52,37 +64,118 @@
                 </li>
                 <li id="user_account">
                     <a href="">UserName</a>
-                    <div></div>
+                    <div class="hover_content">
+                        <div id="userHeading">
+                            <i class="fal fa-user-circle"></i><span>Login/Register</span>
+                            <p>Join VIP club</p>
+                        </div>
+                        <ul>
+                            <li>
+                                <i class="fal fa-clipboard-list"></i>
+                                My Orders
+                            </li>
+                            <li>
+                                <i class="fal fa-comment-alt-dots"></i>
+                                My Returns
+                            </li>
+                            <li>
+                                <i class="far fa-heart"></i>
+                                Wishlist
+                            </li>
+                            <li>
+                                <i class="fas fa-user-circle"></i>
+                                My Profile
+                            </li>
+                            <li>
+                                <i class="fal fa-comment-alt-dots"></i>
+                                My Chat
+                            </li>
+                            <li>
+                                <i class="fal fa-rupee-sign"></i>
+                                My CluesBucks
+                            </li>
+                            <li>
+                                <i class="fal fa-comment-alt-edit"></i>
+                                My Feedback
+                            </li>
+                            <li>
+                                <i class="fal fa-user-headset"></i>
+                                Help & Support
+                            </li>
+                            <li>
+                                <i class="fal fa-rupee-sign"></i>
+                                My Favorite Stores
+                            </li>
+                        </ul>
+                    </div>
                 </li>
                 <li id="signin">
-                    <a href="">Sign-In</a>
+                    <a href="">Sign In</a>
                     <div class="hover_content">
-                        <div id="userHeading"></div>
+                        <div id="userHeading">
+                            <i class="fal fa-user-circle"></i><span>Login/Register</span>
+                            <p>Join VIP club</p>
+                        </div>
                         <ul>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
+                            <li>
+                                <i class="fal fa-clipboard-list"></i>
+                                My Orders
+                            </li>
+                            <li>
+                                <i class="fal fa-comment-alt-dots"></i>
+                                My Returns
+                            </li>
+                            <li>
+                                <i class="far fa-heart"></i>
+                                Wishlist
+                            </li>
+                            <li>
+                                <i class="fas fa-user-circle"></i>
+                                My Profile
+                            </li>
+                            <li>
+                                <i class="fal fa-comment-alt-dots"></i>
+                                My Chat
+                            </li>
+                            <li>
+                                <i class="fal fa-rupee-sign"></i>
+                                My CluesBucks
+                            </li>
+                            <li>
+                                <i class="fal fa-comment-alt-edit"></i>
+                                My Feedback
+                            </li>
+                            <li>
+                                <i class="fal fa-user-headset"></i>
+                                Help & Support
+                            </li>
+                            <li>
+                                <i class="fal fa-rupee-sign"></i>
+                                My Favorite Stores
+                            </li>
                         </ul>
                     </div>
                 </li>
             </ul>
         </div>
     </div>
+    <!-- end of header -->
+
+    <!-- main navigation bar(dropdown options) -->
+
     <div class="main_navigation">
         <div id="wrapper">
             <ul>
+                <!-- made in india logo -->
+
                 <li id="madeIN">
                     <a href="">
                         <img src="https://images.shopclues.com/images/ui/madeinindia.png" alt="madeInIndia">
                     </a>
                 </li>
+
+                <!-- Mobiles & More dropdown options -->
+
                 <li id="nav1" onmouseover="mouseoverNavigation(`nav1`)" onmouseout="mouseoutNavigation(`nav1`)">
                     <a href="">Mobiles & More</a>
                     <div class="menu_wrap">
@@ -185,6 +278,10 @@
                         </div>
                     </div>
                 </li>
+                <!-- End of Mobiles & More dropdown options -->
+
+                <!-- MEN dropdown options -->
+
                 <li id="nav2" onmouseover="mouseoverNavigation(`nav2`)" onmouseout="mouseoutNavigation(`nav2`)">
                     <a href="">MEN</a>
                     <div class="menu_wrap">
@@ -283,6 +380,10 @@
                         </div>
                     </div>
                 </li>
+                <!-- End of MEN dropdown options -->
+
+                <!-- WOMEN dropdown options -->
+
                 <li id="nav3" onmouseover="mouseoverNavigation(`nav3`)" onmouseout="mouseoutNavigation(`nav3`)">
                     <a href="">WOMEN</a>
                     <div class="menu_wrap">
@@ -381,6 +482,10 @@
                         </div>
                     </div>
                 </li>
+                <!-- End of WOMEN dropdown options -->
+                
+                <!-- HOME & KITCHEN dropdown options -->
+
                 <li id="nav4" onmouseover="mouseoverNavigation(`nav4`)" onmouseout="mouseoutNavigation(`nav4`)">
                     <a href="">HOME & KITCHEN</a>
                     <div class="menu_wrap">
@@ -476,6 +581,10 @@
                         </div>
                     </div>
                 </li>
+                <!-- End of HOME & KITCHEN dropdown options -->
+
+                <!-- APPLIANCES dropdown options -->
+
                 <li id="nav5" onmouseover="mouseoverNavigation(`nav5`)" onmouseout="mouseoutNavigation(`nav5`)">
                     <a href="">APPLIANCES</a>
                     <div class="menu_wrap">
@@ -539,6 +648,10 @@
                         </div>
                     </div>
                 </li>
+                <!-- End of APPLIANCES dropdown options -->
+
+                <!-- SPORTS & MORE dropdown options -->
+
                 <li id="nav6" onmouseover="mouseoverNavigation(`nav6`)" onmouseout="mouseoutNavigation(`nav6`)">
                     <a href="">SPORTS & MORE</a>
                     <div class="menu_wrap">
@@ -634,6 +747,10 @@
                         </div>
                     </div>
                 </li>
+                <!-- End of SPORTS & MORE dropdown options -->
+
+                <!-- ESSENTIALS dropdown options -->
+
                 <li id="nav7" onmouseover="mouseoverNavigation(`nav7`)" onmouseout="mouseoutNavigation(`nav7`)">
                     <a href="">ESSENTIALS</a>
                     <div class="menu_wrap">
@@ -713,6 +830,10 @@
                         </div>
                     </div>
                 </li>
+                <!-- End of ESSENTIALS dropdown options -->
+
+                <!-- OFFERS dropdown options -->
+
                 <li id="nav8" onmouseover="mouseoverNavigation(`nav8`)" onmouseout="mouseoutNavigation(`nav8`)">
                     <a href="">OFFERS</a>
                     <div class="menu_wrap">
@@ -805,6 +926,10 @@
                         </div>
                     </div>
                 </li>
+                <!-- End of OFFERS dropdown options -->
+                
+                <!-- GLOBAL SHOPPING options -->
+
                 <li id="nav9">
                     <a href="">GLOBAL SHOPPING</a>
                 </li>

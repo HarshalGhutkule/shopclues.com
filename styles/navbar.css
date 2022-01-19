@@ -42,6 +42,7 @@ body {
     margin-left: 2%;
 }
 
+/* website logo */
 #logo {
     text-align: center;
     display: inline-block;
@@ -55,6 +56,7 @@ body {
     padding: 5.5%;
 }
 
+/* search box */
 #searchBar {
     display: inline-block;
     height: 75%;
@@ -97,6 +99,8 @@ body {
     top: 30px;
 }
 
+/* login - cart - wishlist - location options */
+
 #sellListbtm {
     display: inline-block;
     height: 75%;
@@ -109,14 +113,102 @@ body {
     width: 25%;
 }
 
+#sellListbtm > ul > li {
+    list-style: none;
+    margin-right: 30px;
+    float: left;
+    position: relative;
+}
+
+ li>i, li>a>i {
+     font-size: 22px;
+    color: #24a3b5;
+}
+
+#sellListbtm > ul > li > a {
+    display: inline-block;
+    line-height: 24px;
+    font-weight: 500;
+    color: #212121;
+    position: relative;
+    text-decoration: none;
+}
+
 .hover_content {
-    visibility: hidden;
-    opacity: 0;
+    display: none;
     padding-top: 5px;
     transition: all .2s ease-in-out;
-    top: 130%;
+    top: 100%;
+    right: 0%;
     position: absolute;
     z-index: 9;
+    width: 238px;
+    background: white;
+    background-clip: padding-box;
+    border: 1px solid red;
+}
+
+.hover_content>ul {
+    display: inline-block;
+    width: 100%;
+}
+
+#user_account {
+    display: none;
+}
+
+#signin {
+    position: relative;
+    top: -3px;
+}
+
+#signin:hover .hover_content {
+    display: block;
+}
+
+#userHeading {
+    width: 100%;
+    background: #24a3b5;
+    min-height: 60px;
+    color: #fff;
+    position: relative;
+    height: 60px;
+    float: left;
+    border-radius: 4px 4px 0 0;
+    background-clip: padding-box;
+    padding-left: 10%;
+    padding: 5%;
+    line-height: 0%;
+}
+
+#userHeading>span {
+    font-weight: 500;
+    margin-left: 5%;
+}
+
+#userHeading>p {
+    margin-left: 12%;
+}
+
+.hover_content ul>li {
+    list-style-type: none;
+    display: inline-block;
+    height: 40px;
+    width: 120%;
+    position: relative;
+    padding-top: 5%;
+    border: 1px solid red;
+    margin-left: -20%;
+    padding-left: 15%;
+    font-size: 13px;
+}
+
+.hover_content ul>li>i {
+    margin-right: 2%;
+}
+
+.hover_content ul>li:hover {
+    background-color: #ddf4f7;
 }
 
 #quickCart{
@@ -139,60 +231,15 @@ body {
 }
 
 .btnContainer {
-    display: flex;
+    display: none;
     padding: 12px 15px;
+
 }
 
 .listItem {
     overflow: auto;
 }
 
-#sellListbtm > ul > li {
-    list-style: none;
-    margin-right: 30px;
-    float: left;
-    position: relative;
-}
- li>i {
-    color: #24a3b5;
-}
-
-#sellListbtm > ul > li > a {
-    display: inline-block;
-    line-height: 24px;
-    font-weight: 500;
-    color: #212121;
-    position: relative;
-    text-decoration: none;
-}
-
-#user_account {
-    display: none;
-}
-
-#signin {
-    position: relative;
-    top: -3px;
-}
-
-#userHeading {
-    width: 100%;
-    background: #24a3b5;
-    min-height: 60px;
-    color: #fff;
-    position: relative;
-    height: 60px;
-    float: left;
-    border-radius: 4px 4px 0 0;
-    background-clip: padding-box;
-}
-
-.hover_content ul>li {
-    list-style-type: none;
-    display: inline-block;
-    width: 100%;
-    position: relative;
-}
 
 /* main_navigation styling */
 
@@ -226,6 +273,9 @@ body {
     vertical-align: top;
 }
 
+
+/* made in india logo */
+
 #madeIN {
     height: 43px;
     margin-top: -0.5%;
@@ -244,18 +294,21 @@ body {
     position: relative;
     text-transform: uppercase;
     font-size: 12px;
+    font-weight: 500;
+    text-decoration: none;
 }
+
+/* hidden dropdown div styling */
 
 .main_navigation .menu_wrap {
     position: absolute;
     padding: 0;
-    top: 130%;
+    top: 100%;
     width: 75%;
     min-height: 400px;
     margin: 0 auto;
     left: 0;
     right: 0;
-    /* z-index: 99999; */
     text-align: left;
     background: #fff;
     transition: all .2s ease-in-out;
@@ -288,7 +341,6 @@ body {
 
 li {
     display: list-item;
-    text-align: -webkit-match-parent;
 }
 
 #nav1 {

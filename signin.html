@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <title>Document</title>
+    <style>
+        .popup_signin {
+            height: 550px;
+            width: 800px;
+            position: relative;
+            top: 100%;
+            left: 25%;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            border-radius: 10px;
+            display: flex;
+        }
+        .points {
+            width: 30%;
+            background-color: #fbfbfb;
+        }
+        #page_signin {
+            width: 70%;
+            padding-left: 3%;
+        }
+        .signup {
+            width: 100%;
+            padding-left: 3%;
+            display: none;
+        }
+        .signinShow {
+            width: 100%;
+            padding-left: 3%;
+            display: block;
+        }
+
+        .points>ul {
+            padding: 5% 0% 5% 0%;
+            height: 100%;
+            
+        }
+        .points>ul>li {
+            color: #7f7e7e;
+            list-style: none;
+            line-height: 0%;
+            text-align: center;
+            height: 30%;
+        }
+        .points>ul>li>i {
+            font-size: 40px;
+        }
+        h6 {
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 0%;
+        }
+        h6+p {
+            font-size: 12px;
+        }
+        #select_op {
+            display: flex;
+            padding: 5%;
+        }
+        #select_op>h2 {
+            float: left;
+            margin: 0px 45px 15px 0px;
+            font-size: 16px;
+            font-weight: 400;
+            cursor: pointer;
+        }
+        #select_op>h2:nth-child(1){
+            border-bottom: 2px solid #55b8c6;
+            color: #55b8c6;
+        }
+        form>input {
+            margin: 2%;
+            width: 75%;
+            height: 30px;
+            border: none;
+            border-bottom: 1px solid rgb(189, 189, 189);
+        }
+        input[type="submit"] {
+            height: 40px;
+            width: 40%;
+            background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+        }
+        h3+button {
+            background-color: #3c5a98;
+            height: 35px;
+            width: 35%;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            margin-left: 2%;
+        }
+        h3 {
+            font-size: 14px;
+            font-weight: 500;
+            margin-left: 2%;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="popup_signin">
+        <div class="points">
+            <ul>
+                <li>
+                    <i class="fas fa-hand-holding-usd"></i>
+                    <h6>Loyalty Points</h6>
+                    <p>Earn CluesBucks on prepaid orders</p>
+                </li>
+                <li>
+                    <i class="fas fa-cart-arrow-down"></i>
+                    <h6>Instant Checkout</h6>
+                    <p>Hassle-Free Payment Everytime</p>
+                </li>
+                <li>
+                    <i class="fas fa-badge-percent"></i>
+                    <h6>Exclusive Offers</h6>
+                    <p>For special offers & value deals</p>
+                </li>
+            </ul>
+        </div>
+        <div id="page_signin">
+            <div id="select_op">
+                <h2 onclick="showLogin()">LOGIN</h2>
+                <h2 onclick="showRegister()">REGISTER</h2>
+            </div>
+            <div class="signinShow">
+                <form>
+                    <input type="email" placeholder="Enter your email id">
+                    <br><br>
+                    <input type="password" placeholder="Enter your password">
+                    <br><br>
+                    <input type="submit" value="Login">
+                </form>
+                <h3>Social Login</h3>
+                <button>Continue with Facebook</button>
+            </div>
+            <div class="signup">
+                <form>
+                    <input type="email" placeholder="Enter your email id">
+                    <br><br>
+                    <input type="number" placeholder="Enter your mobile number">
+                    <br><br>
+                    <input type="password" placeholder="Enter your password">
+                    <br><br>
+                    <input type="submit" value="Register">
+                </form>
+                <h3>Register With</h3>
+                <button>Continue with Facebook</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+
+    let div1 = document.querySelector(".signinShow");
+    let div2 = document.querySelector(".signup");
+    let h2_1 = document.querySelector("#select_op>h2:nth-child(1)");
+    let h2_2 = document.querySelector("#select_op>h2:nth-child(2)");
+
+    let showLogin = () => {
+        div2.style.display = "none";
+        h2_2.style.color = "black";
+        h2_2.style.borderBottom = "none";
+
+        div1.style.display = "block";
+        h2_1.style.color = "#55b8c6";
+        h2_1.style.borderBottom = "2px solid #55b8c6";
+
+    }
+
+    let showRegister = () => {
+        div1.style.display = "none";
+        h2_1.style.color = "black";
+        h2_1.style.borderBottom = "none";
+
+        div2.style.display = "block";
+        h2_2.style.color = "#55b8c6";
+        h2_2.style.borderBottom = "2px solid #55b8c6";
+
+    }
+
+</script>
