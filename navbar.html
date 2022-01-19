@@ -62,58 +62,11 @@
                         </div>
                     </div>
                 </li>
-                <li id="user_account">
-                    <a href="">UserName</a>
-                    <div class="hover_content">
-                        <div id="userHeading">
-                            <i class="fal fa-user-circle"></i><span>Login/Register</span>
-                            <p>Join VIP club</p>
-                        </div>
-                        <ul>
-                            <li>
-                                <i class="fal fa-clipboard-list"></i>
-                                My Orders
-                            </li>
-                            <li>
-                                <i class="fal fa-comment-alt-dots"></i>
-                                My Returns
-                            </li>
-                            <li>
-                                <i class="far fa-heart"></i>
-                                Wishlist
-                            </li>
-                            <li>
-                                <i class="fas fa-user-circle"></i>
-                                My Profile
-                            </li>
-                            <li>
-                                <i class="fal fa-comment-alt-dots"></i>
-                                My Chat
-                            </li>
-                            <li>
-                                <i class="fal fa-rupee-sign"></i>
-                                My CluesBucks
-                            </li>
-                            <li>
-                                <i class="fal fa-comment-alt-edit"></i>
-                                My Feedback
-                            </li>
-                            <li>
-                                <i class="fal fa-user-headset"></i>
-                                Help & Support
-                            </li>
-                            <li>
-                                <i class="fal fa-rupee-sign"></i>
-                                My Favorite Stores
-                            </li>
-                        </ul>
-                    </div>
-                </li>
                 <li id="signin">
-                    <a href="">Sign In</a>
+                    <a onclick="openSigninPage()" id="login_sucess">Sign In</a>
                     <div class="hover_content">
-                        <div id="userHeading">
-                            <i class="fal fa-user-circle"></i><span>Login/Register</span>
+                        <div id="userHeading" onclick="openSigninPage()">
+                            <i class="fal fa-user-circle"></i><span id="login_sucess1">Login/Register</span>
                             <p>Join VIP club</p>
                         </div>
                         <ul>
@@ -152,6 +105,10 @@
                             <li>
                                 <i class="fal fa-rupee-sign"></i>
                                 My Favorite Stores
+                            </li>
+                            <li id="signout" onclick="signOut()">
+                                <i class="fal fa-sign-out"></i>
+                                Sign Out
                             </li>
                         </ul>
                     </div>
@@ -193,7 +150,7 @@
                                     <li>Techno</li>
                                     <li>Infinix</li>
                                     <li>Micromax</li>
-                                    <br><br>
+                                    <br>
                                     <li><strong>Refurbished Smartphones</strong></li>
                                     <br><br>
                                     <li><strong>Refurbished Feature Phones</strong></li>
@@ -212,7 +169,7 @@
                                     <li>Gfive</li>
                                     <li>Blackbear</li>
                                     <li>Samsung</li>
-                                    <br><br>
+                                    <br>
                                     <li><strong>Gaming Consoles</strong></li>
                                     <li>Gaming Titles</li>
                                     <li>Gaming Accessories</li>
@@ -229,7 +186,7 @@
                                     <li>Cables</li>
                                     <li>Adapter & Chargers</li>
                                     <li>Selfie Sticks</li>
-                                    <br><br>
+                                    <br>
                                     <li><strong>Storage Devices</strong></li>
                                     <li>Memory Cards</li>
                                     <li>Pen Drives</li>
@@ -248,7 +205,7 @@
                                     <li>Boat</li>
                                     <li>Syska</li>
                                     <li>JBL</li>
-                                    <br><br>
+                                    <br>
                                     <li><strong>Audio Store</strong></li>
                                     <li>Headphones & Earphones</li>
                                     <li>Bluetooth Earphones</li>
@@ -263,15 +220,15 @@
                                     <li>Asus</li>
                                     <li>Acer</li>
                                     <li>Coconics</li>
-                                    <br><br>
+                                    <br>
                                     <li><strong>Refurbished Laptops</strong></li>
-                                    <br><br>
+                                    <br>
                                     <li><strong>Laptop Accessories</strong></li>
                                     <li>Mouse</li>
                                     <li>Keyboards</li>
                                     <li>Laptop Bags</li>
                                     <li>Laptop Skins</li>
-                                    <br><br>
+                                    <br>
                                     <li><strong>Printers</strong></li>
                                 </ul>
                             </div>
@@ -301,7 +258,7 @@
                                     <li>Winter wear</li>
                                     <li>Inner & Sleepwear</li>
                                     <li>29K Store</li>
-                                    <br><br>
+                                    <br>
                                     <li><strong>Sportswear</strong></li>
                                 </ul>
                             </div>
@@ -329,7 +286,7 @@
                                     <li>Fastrack, Sonata & More</li>
                                     <li>Budget Watches</li>
                                     <li>Smart Watches</li>
-                                    <br><br>
+                                    <br>
                                     <li><strong>Men's Jewellery</strong></li>
                                     <li>Fashion Jewellery</li>
                                     <li>Chains & Pendants</li>
@@ -343,7 +300,7 @@
                                     <li><strong>Fragrances</strong></li>
                                     <li>Fragrance Combos and Kits</li>
                                     <li>Deodorants</li>
-                                    <br><br>
+                                    <br>
                                     <li><strong>Grooming</strong></li>
                                     <li>Beard & Moustache Care</li>
                                     <li>Men's Shaving</li>
@@ -352,7 +309,7 @@
                                     <li>Oral Care</li>
                                     <li>Skin Care</li>
                                     <li>Hair Care</li>
-                                    <br><br>
+                                    <br>
                                     <li><strong>Eyewear</strong></li>
                                     <li>Sunglasses</li>
                                     <li>Spectacle Frames</li>
@@ -367,7 +324,7 @@
                                     <li>Caps</li>
                                     <li>Winter Accessories</li>
                                     <li>Men's Accessories Gift Sets</li>
-                                    <br><br>
+                                    <br>
                                     <li><strong>Bags & luggage</strong></li>
                                     <li>Backpacks & Laptop Bags</li>
                                     <li>Gym Bags</li>
@@ -397,7 +354,7 @@
                                     <li>Dress Material</li>
                                     <li>Leggings & Churidar</li>
                                     <li>Meia Store</li>
-                                    <br><br>
+                                    <br>
                                     <li><strong>Western Wear</strong></li>
                                     <li>Tops & Tees</li>
                                     <li>Dresses</li>
@@ -415,7 +372,7 @@
                                     <li>Sleepwear</li>
                                     <li>Shapewear</li>
                                     <li>Lingerie Sets</li>
-                                    <br><br>
+                                    <br>
                                     <li><strong>Footwear</strong></li>
                                     <li>Casual Shoes</li>
                                     <li>Flats & Sandals</li>
@@ -436,13 +393,13 @@
                                     <li>Gold & Diamond Jewellery</li>
                                     <li>Silver Jewellery</li>
                                     <li>Coins & Collectibles</li>
-                                    <br><br>
+                                    <br>
                                     <li><strong>Women's Watches</strong></li>
                                     <li>Casual Wear Watches</li>
                                     <li>Office Wear Watches</li>
                                     <li>Branded Watches</li>
                                     <li>Budget Watches</li>
-                                    <br><br>
+                                    <br>
                                     <li><strong>Couple Watches</strong></li>
                                 </ul>
                             </div>
@@ -458,7 +415,7 @@
                                     <li>Bath Essentials</li>
                                     <li>Oral Care</li>
                                     <li>Women Hygiene</li>
-                                    <br><br>
+                                    <br>
                                     <li><strong>Fragrances</strong></li>
                                     <li>Perfumes</li>
                                     <li>Deodorants</li>
@@ -473,7 +430,7 @@
                                     <li>Belts</li>
                                     <li>Handkerchiefs</li>
                                     <li>Shawls</li>
-                                    <br><br>
+                                    <br>
                                     <li><strong>Bags & luggage</strong></li>
                                     <li>Backpacks & Laptop Bags</li>
                                     <li>Gym Bags</li>
@@ -499,7 +456,7 @@
                                     <li>Kitchen tools</li>
                                     <li>Lunch box</li>
                                     <li>Kitchen storage</li>
-                                    <br><br>
+                                    <br>
                                     <li><strong>Kitchen Appliances</strong></li>
                                     <li>Gas Cooktops</li>
                                     <li>Juicer Mixer Grinders</li>
@@ -519,7 +476,7 @@
                                     <li>Blankets</li>
                                     <li>Towels</li>
                                     <li>Furnishing Combos</li>
-                                    <br><br>
+                                    <br>
                                     <li><strong>Bathroom & Sanitaryware</strong></li>
                                     <li>Sanitaryware</li>
                                     <li>Bathroom Fixtures</li>
@@ -536,12 +493,12 @@
                                     <li>Rechargeable Lights</li>
                                     <li>Electrical</li>
                                     <li>Panel & Ceiling Lights</li>
-                                    <br><br>
+                                    <br>
                                     <li><strong>Tools & Hardware</strong></li>
                                     <li>Hand Tools</li>
                                     <li>Power Tools</li>
                                     <li>Safety Equipments</li>
-                                    <br><br>
+                                    <br>
                                     <li><strong>Home Improvement</strong></li>
                                     <li>Cleaning Supplies</li>
                                     <li>Laundry Organisation</li>
@@ -557,7 +514,7 @@
                                     <li>Religion & Spirituality</li>
                                     <li>Table Decoratives</li>
                                     <li>Garden</li>
-                                    <br><br>
+                                    <br>
                                     <li><strong>Furniture</strong></li>
                                     <li>Inflatable Sofas</li>
                                     <li>Storage Furniture</li>
@@ -596,13 +553,13 @@
                                     <li>Full HD</li>
                                     <li>HD Ready</li>
                                     <li>Ultra HD</li>
-                                    <br><br>
+                                    <br>
                                     <li><strong>Shop TV By Screen</strong></li>
                                     <li>Below 32 Inch</li>
                                     <li>32 Inch</li>
                                     <li>39 Inch - 42 Inch</li>
                                     <li>43 Inch & Above</li>
-                                    <br><br>
+                                    <br>
                                     <li><strong>DTH</strong></li>
                                 </ul>
                             </div>
@@ -612,13 +569,13 @@
                                     <li>Air Conditioners</li>
                                     <li>Split ACs</li>
                                     <li>Window Acs</li>
-                                    <br><br>
+                                    <br>
                                     <li><strong>Stabilizers</strong></li>
-                                    <br><br>
+                                    <br>
                                     <li><strong>Air Coolers</strong></li>
-                                    <br><br>
+                                    <br>
                                     <li><strong>Air Purifiers And De-Humidifiers</strong></li>
-                                    <br><br>
+                                    <br>
                                     <li><strong>Refrigerators</strong></li>
                                     <li>Single Door</li>
                                     <li>Double Door</li>
@@ -631,13 +588,13 @@
                                     <li>Semi Automatic</li>
                                     <li>Fully Automatic Top Load</li>
                                     <li>Fully Automatic Front Load</li>
-                                    <br><br>
+                                    <br>
                                     <li><strong>Geysers</strong></li>
-                                    <br><br>
+                                    <br>
                                     <li><strong>Heaters</strong></li>
-                                    <br><br>
+                                    <br>
                                     <li><strong>Inverters</strong></li>
-                                    <br><br>
+                                    <br>
                                     <li><strong>Large Kitchen Appliances</strong></li>
                                     <li>Chimney & Hoods</li>
                                     <li>Microwave and Halogen Ovens</li>
@@ -665,7 +622,7 @@
                                     <li>Fat Burners</li>
                                     <li>Vitamins & Minerals</li>
                                     <li>Ayurveda & Herbal</li>
-                                    <br><br>
+                                    <br>
                                     <li><strong>Healthcare</strong></li>
                                     <li>Flu Care</li>
                                     <li>Massage & Relaxation</li>
@@ -684,7 +641,7 @@
                                     <li>Fitness Accessories</li>
                                     <li>Treadmills</li>
                                     <li>Cardio Equipments</li>
-                                    <br><br>
+                                    <br>
                                     <li><strong>Sports</strong></li>
                                     <li>Cricket Bats</li>
                                     <li>Footballs</li>
@@ -703,7 +660,7 @@
                                     <li>Car Body Covers</li>
                                     <li>Door & Bumper Guards</li>
                                     <li>Car Electronics</li>
-                                    <br><br>
+                                    <br>
                                     <li><strong>Bike Accessories & more</strong></li>
                                     <li>Bike Body Covers</li>
                                     <li>Riding Gear</li>
@@ -721,7 +678,7 @@
                                     <li>Hair Care</li>
                                     <li>Personal Care & Grooming Products</li>
                                     <li>Beauty Accessories</li>
-                                    <br><br>
+                                    <br>
                                     <li><strong>Grooming</strong></li>
                                     <li>Fragrance Combos and Kits</li>
                                     <li>Beard & Moustache Care</li>
@@ -740,7 +697,7 @@
                                     <li>Regional Sweets and snacks</li>
                                     <li>Stationery</li>
                                     <li>Books</li>
-                                    <br><br>
+                                    <br>
                                     <li><strong>Gift Cards</strong></li>
                                 </ul>
                             </div>
@@ -767,7 +724,7 @@
                                     <li>Mouth Freshners & Digestives</li>
                                     <li>Ready to cook</li>
                                     <li>Sauces Dips & Pickles</li>
-                                    <br><br>
+                                    <br>
                                     <li><strong>Grocery & Staples</strong></li>
                                     <li>Rice & Flours</li>
                                     <li>Pulses</li>
@@ -781,13 +738,13 @@
                                     <li>Disposables</li>
                                     <li>Pooja Essentials</li>
                                     <li>Repellents & Devices</li>
-                                    <br><br>
+                                    <br>
                                     <li><strong>Ayurveda & Herbal</strong></li>
-                                    <br><br>
+                                    <br>
                                     <li><strong>Flu Care</strong></li>
-                                    <br><br>
+                                    <br>
                                     <li><strong>Medical Equipment & Accessories</strong></li>
-                                    <br><br>
+                                    <br>
                                     <li><strong>Nutrition & Supplements</strong></li>
                                     <li>Ayurveda & Herbal</li>
                                     <li>Family Nutrition</li>
@@ -802,7 +759,7 @@
                                     <li>Oral Care</li>
                                     <li>Hair Care</li>
                                     <li>Fragrances</li>
-                                    <br><br>
+                                    <br>
                                     <li><strong>Baby Care</strong></li>
                                     <li>Baby Food</li>
                                     <li>Bath & Skin Care</li>
@@ -813,13 +770,13 @@
                             <div id="column_4" class="s_col">
                                 <ul>
                                     <li><strong>Top Brands</strong></li>
-                                    <br><br>
+                                    <br>
                                     <li><strong>Himalaya</strong></li>
-                                    <br><br>
+                                    <br>
                                     <li><strong>Cadbury</strong></li>
-                                    <br><br>
+                                    <br>
                                     <li><strong>Veet</strong></li>
-                                    <br><br>
+                                    <br>
                                     <li><strong>Pharma</strong></li>
                                     <li>Ayurveda</li>
                                     <li>Pain Relief</li>
@@ -841,16 +798,16 @@
                             <div id="column_1" class="s_col">
                                 <ul>
                                     <li><strong>All Offers</strong></li>
-                                    <br><br>
+                                    <br>
                                     <li><strong>Kotra Top Sellers</strong></li>
-                                    <br><br>
+                                    <br>
                                     <li><strong>Season Essentials</strong></li>
                                     <li>Womens Tops & Skirts</li>
                                     <li>FlipFlops</li>
                                     <li>Mens Shorts</li>
-                                    <br><br>
+                                    <br>
                                     <li><strong>Kitchen Essentials</strong></li>
-                                    <br><br>
+                                    <br>
                                     <li><strong>Popular Categories</strong></li>
                                     <li>Women Ethnic</li>
                                     <li>Mens Tshirt</li>
@@ -867,7 +824,7 @@
                                     <li>Fashion</li>
                                     <li>Home & Kitchen</li>
                                     <li>Footwear</li>
-                                    <br><br>
+                                    <br>
                                     <li><strong>Featured Brands</strong></li>
                                     <li>Stylogue</li>
                                     <li>Ikall</li>
@@ -884,7 +841,7 @@
                                     <li>Home & Living</li>
                                     <li>Electronic</li>
                                     <li>Daily Utility</li>
-                                    <br><br>
+                                    <br>
                                     <li><strong>Explore Our Stores</strong></li>
                                     <li>Saree Fest</li>
                                     <li>Watch Carnival</li>
@@ -901,7 +858,7 @@
                                     <li>Under 199</li>
                                     <li>Under 249</li>
                                     <li>Under 349</li>
-                                    <br><br>
+                                    <br>
                                     <li><strong>Shop By Discount</strong></li>
                                     <li>Upto 25% Off</li>
                                     <li>Upto 50% Off</li>
@@ -916,7 +873,7 @@
                                     <li>Men Combo</li>
                                     <li>Watch Combo</li>
                                     <li>Footwear Combo</li>
-                                    <br><br>
+                                    <br>
                                     <li><strong>Best Offers</strong></li>
                                     <li>Korean Avenue</li>
                                     <li>Refer & Earn</li>
@@ -936,6 +893,66 @@
             </ul>
         </div>
     </div>
+
+
+    <!-- popup Window signin and regiser page -->
+    <div id="back">
+        <div class="popup_signin">
+            <div class="points">
+                <ul>
+                    <li>
+                        <i class="fas fa-hand-holding-usd"></i>
+                        <h6>Loyalty Points</h6>
+                        <p>Earn CluesBucks on prepaid orders</p>
+                    </li>
+                    <li>
+                        <i class="fas fa-cart-arrow-down"></i>
+                        <h6>Instant Checkout</h6>
+                        <p>Hassle-Free Payment Everytime</p>
+                    </li>
+                    <li>
+                        <i class="fas fa-badge-percent"></i>
+                        <h6>Exclusive Offers</h6>
+                        <p>For special offers & value deals</p>
+                    </li>
+                </ul>
+            </div>
+            <div id="page_signin">
+                <div id="select_op">
+                    <h2 onclick="showLogin()">LOGIN</h2>
+                    <h2 onclick="showRegister()">REGISTER</h2>
+                    <button id="closetab"><i class="fal fa-times"></i></button>
+                </div>
+                <div class="signinShow">
+                    <form>
+                        <input type="text" placeholder="Enter your username" id="username2">
+                        <br><br>
+                        <input type="password" placeholder="Enter your password" id="password2">
+                        <br><br>
+                        <input type="submit" value="Login" id="checkdetail">
+                    </form>
+                    <h3>Social Login</h3>
+                    <button>Continue with Facebook</button>
+                </div>
+                <div class="signup">
+                    <form>
+                        <input type="email" placeholder="Enter your email id" id="email">
+                        <br><br>
+                        <input type="number" placeholder="Enter your mobile number" id="number">
+                        <br><br>
+                        <input type="text" placeholder="Enter your username" id="username1">
+                        <br><br>
+                        <input type="password" placeholder="Enter your password" id="password1">
+                        <br><br>
+                        <input type="submit" value="Register" id="storedetail">
+                    </form>
+                    <h3>Register With</h3>
+                    <button>Continue with Facebook</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
 <script src="./Components/navbar.js"></script>

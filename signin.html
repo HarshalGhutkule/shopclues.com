@@ -139,24 +139,26 @@
             </div>
             <div class="signinShow">
                 <form>
-                    <input type="email" placeholder="Enter your email id">
+                    <input type="text" placeholder="Enter your username" id="username2">
                     <br><br>
-                    <input type="password" placeholder="Enter your password">
+                    <input type="password" placeholder="Enter your password" id="password2">
                     <br><br>
-                    <input type="submit" value="Login">
+                    <input type="submit" value="Login" id="checkdetail">
                 </form>
                 <h3>Social Login</h3>
                 <button>Continue with Facebook</button>
             </div>
             <div class="signup">
                 <form>
-                    <input type="email" placeholder="Enter your email id">
+                    <input type="email" placeholder="Enter your email id" id="email">
                     <br><br>
-                    <input type="number" placeholder="Enter your mobile number">
+                    <input type="number" placeholder="Enter your mobile number" id="number">
                     <br><br>
-                    <input type="password" placeholder="Enter your password">
+                    <input type="text" placeholder="Enter your username" id="username1">
                     <br><br>
-                    <input type="submit" value="Register">
+                    <input type="password" placeholder="Enter your password" id="password1">
+                    <br><br>
+                    <input type="submit" value="Register" id="storedetail">
                 </form>
                 <h3>Register With</h3>
                 <button>Continue with Facebook</button>
@@ -167,6 +169,8 @@
 </html>
 
 <script>
+
+    // function to show login,register div
 
     let div1 = document.querySelector(".signinShow");
     let div2 = document.querySelector(".signup");
@@ -193,6 +197,98 @@
         h2_2.style.color = "#55b8c6";
         h2_2.style.borderBottom = "2px solid #55b8c6";
 
+    }
+
+
+    // function for storing userdetail on masai server(register page)
+
+    let storedetail = document.getElementById("storedetail");
+
+    storedetail.addEventListener("click", postData);
+
+    async function postData(event){
+
+        event.preventDefault();
+
+        let email = document.getElementById("email").value;
+        let number = document.getElementById("number").value;
+        let username = document.getElementById("username1").value;
+        let password = document.getElementById("password1").value;
+
+        if(email == "" || number == "" || username == "" || password == ""){
+            alert("Please fill all info");
+        }
+        else{
+            let userdetail = {
+                email,
+                number,
+                username,
+                password
+            }
+
+            userdetail = JSON.stringify(userdetail);
+
+            let url = "https://masai-api-mocker.herokuapp.com/auth/register";
+
+            try{
+                let responce = await fetch(url, {
+                    method: "POST",
+                    body: userdetail,
+                    headers: {
+                        "Content-Type" : "application/json"
+                    }
+                })
+
+                let res = await responce.json();
+                console.log(res);
+                if(res.error === true){
+                    alert(res.message);
+                }
+                else{
+                    alert(res.message);
+                }
+            }
+            catch(err){
+                console.log(err);
+            }
+        }
+        
+    }
+
+    // function for checking userdetail on masai server (login page)
+
+    let checkdetail = document.getElementById("checkdetail");
+
+    checkdetail.addEventListener("click", checkData);
+
+    async function checkData(event){
+        event.preventDefault();
+
+        let userData = {
+            username : document.getElementById("username2").value,
+            password : document.getElementById("password2").value, 
+        };
+
+        userData = JSON.stringify(userData);
+
+        try{
+            let url = "https://masai-api-mocker.herokuapp.com/auth/login";
+            let responce = await fetch(url,{
+                method:"POST",
+                body:userData,
+                headers: {
+                    "Content-Type" : "application/json"
+                }
+            })
+
+            let res = await responce.json();
+            console.log(res);
+            alert("Login successfully");
+        }
+        catch(err){
+            console.log(err);
+            alert(err);
+        }
     }
 
 </script>
