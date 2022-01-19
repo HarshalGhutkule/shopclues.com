@@ -1,0 +1,8 @@
+
+footer {
+    display: grid;
+    grid-template-rows: 250px 100px 700px 600px 60px;
+}
+footer>div {
+    border: 1px solid red;
+}

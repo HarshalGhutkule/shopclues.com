@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <title>Document</title>
     <link rel="stylesheet" href="styles/navbar.css">
+    <link rel="stylesheet" href="styles/footer.css">
 </head>
 <body>
 
@@ -53,12 +54,19 @@
                     <i class="far fa-heart"></i>
                 </li>
                 <li>
-                    <a href=""><i class="fal fa-shopping-cart"></i></a>
-                    <div class="hover_content">
+                    <a href="" class="shopCart" onmouseover="showcart()" onmouseout="hidecart()"><i class="fal fa-shopping-cart"><span id="qty">1</span></i></a>
+                    <div class="hover_content hover_content1">
                         <div id="quickCart">
-                            <div class="nItems"></div>
-                            <div class="listItem"></div>
-                            <div class="btnContainer"></div>
+                            <div class="nItems">
+                                
+                            </div>
+                            <div class="listItem">
+                                
+                            </div>
+                            <div class="btnContainer">
+                                <a href="">View Cart</a>
+                                <a href="">Place Order</a>
+                            </div>
                         </div>
                     </div>
                 </li>
@@ -953,6 +961,14 @@
         </div>
     </div>
 
+    <!-- footer -->
+    <footer>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </footer>
 </body>
 </html>
 <script src="./Components/navbar.js"></script>

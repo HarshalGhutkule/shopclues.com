@@ -33,6 +33,16 @@ let signOut = () => {
         document.getElementById("signout").style.display = "none";
 }
 
+// function to showcart
+let showcart = () => {
+    document.querySelector(".hover_content1").style.display = "block";
+}
+
+// function to hidecart
+let hidecart = () => {
+    document.querySelector(".hover_content1").style.display = "none";
+}
+
 // functions for sign-in and regiser page
 
 // function to show login,register div
@@ -187,3 +197,52 @@ close.addEventListener("click", ()=>{
     document.getElementById("back").style.display = "none";
 })
 
+// function to append cart data to navbar
+
+// a();
+
+// function a(){
+//     let arr = [];
+//     let cart = {
+//         image:"https://images.shopclues.com/images1/thumbnails/84619/320/320/136963262-84619914-1575020674.jpg",
+//         name: "Sunshopping Tan Men Leatherite Pin-Hole Buckle Belt",
+//         price: 159,
+//         qty: 2,
+//     };
+
+//     arr.push(cart);    
+//     localStorage.setItem("cartData", JSON.stringify(arr));
+// }
+
+
+let appendCartdata = () => {
+
+    
+    let location = document.querySelector(".listItem");
+    let quantity = document.querySelector(".nItems");
+    let showonNav = document.getElementById("qty");
+    
+    let data = JSON.parse(localStorage.getItem("cartData"));
+
+    let x = "";
+
+    data.forEach(({name,image,price,qty},index)=>{
+        x += `<div>
+                <img src="${image}" alt="">
+            </div>
+            <div id="rs">
+                <p>${name}</p>
+                <p>Rs.${price}</p>
+                <p>Qty:${qty}</p>
+            </div>`
+
+        location.innerHTML = x;
+        quantity.innerHTML = `<p>Your Shopping Cart (${index+1} Items)</p>`;
+        showonNav.style.display = "block";
+        showonNav.textContent = index+1;
+    })
+    
+ 
+    
+}
+appendCartdata();

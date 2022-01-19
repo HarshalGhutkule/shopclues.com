@@ -134,7 +134,10 @@ body {
     text-decoration: none;
 }
 
-.hover_content {
+
+/* sign in dropdown option */
+
+.hover_content, .hover_content1 {
     display: none;
     padding-top: 5px;
     transition: all .2s ease-in-out;
@@ -148,9 +151,16 @@ body {
     border: 1px solid red;
 }
 
+.hover_content1 {
+    display: none;
+    width: 430px;
+    padding: 0px;
+}
+
 .hover_content>ul {
     display: inline-block;
     width: 100%;
+    border-radius: 5px;
 }
 
 #signin {
@@ -217,33 +227,81 @@ body {
     display: none;
 }
 
+/* shopping cart */
+
 #quickCart{
-    width: 400px;
+    width: 100%;
     background: #fff;
     box-shadow: 0 2px 8px 0 rgb(0 0 0 / 20%);
     border-radius: 4px;
     background-clip: padding-box;
+    padding-left: 3%;
 }
 
-.nItem {
+#quickCart>div {
+    border-bottom: 1px solid rgb(231, 231, 231);
+}
+
+.nItems, #rs>p {
     display: inline-block;
     width: 100%;
-    padding: 8px 12px;
-    border-bottom: 1px solid #f0f0f0;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 500;
     color: #212121;
-    line-height: 24px;
 }
 
+
 .btnContainer {
-    display: none;
     padding: 12px 15px;
 
 }
 
+.btnContainer>a {
+    width: 50%;
+    font-size: 14px;
+    white-space: nowrap;
+    padding: 4px 10px;
+    margin: 0 3px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #fff;
+    color: #fb760b;
+    border: 1px solid #fb760b;
+    border-radius: 5px;
+}
+
+.btnContainer>a:nth-child(2){
+    background: #fb760b;
+    color: white;
+}
+
 .listItem {
     overflow: auto;
+    display: flex;
+}
+
+.listItem>div>img {
+    float: left;
+    max-width: 65px;
+    margin-right: 12px;
+    position: relative;
+    top: 4px;
+}
+
+#qty {
+    position: absolute;
+    top: 0%;
+    right: -50%;
+    height: 20px;
+    width: 20px;
+    padding: 15% 20% 20% 25%;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 50%;
+    background-color: #fb760b;
+    color: white;
+    display: none;
 }
 
 
@@ -347,6 +405,12 @@ body {
 
 .s_col>ul>li {
     width: 100%;
+    color: #757575;
+}
+
+.s_col>ul>li:hover {
+    cursor: pointer;
+    color: #24a3b5;
 }
 
 #nav1 {
