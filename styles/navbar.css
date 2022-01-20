@@ -37,7 +37,7 @@ body {
     right: 0;
     top: 0;
     position: sticky;
-    z-index: 7;
+    z-index: 2;
 }
 
 #sellList {
@@ -80,6 +80,7 @@ body {
     height: 75%;
     width: 55%;
     margin-right: -4%;
+    padding-top: 2%;
 }
 
 #searchBar > span input[type="text"] {
@@ -97,7 +98,6 @@ body {
     z-index: 1;
     transition: all .2s ease-in-out;
     top: -24px;
-
 }
 
 #searchBar > span .srch_btn {
@@ -139,7 +139,7 @@ body {
 }
 
  li>i, li>a>i {
-     font-size: 22px;
+    font-size: 22px;
     color: #24a3b5;
 }
 
@@ -166,7 +166,7 @@ body {
     top: 105%;
     right: 0%;
     position: absolute;
-    z-index: 9;
+    z-index: 7;
     width: 238px;
     background: white;
     background-clip: padding-box;

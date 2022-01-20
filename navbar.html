@@ -36,7 +36,7 @@
         <div id="searchBar">
             <span>
                 <input type="text" placeholder="What is on your mind today?" id="getinput">
-                <button onclick="showResult()" class="srch_btn">Search</button>
+                <button class="srch_btn">Search</button>
             </span>
         </div>
 
@@ -54,7 +54,7 @@
                     <i class="far fa-heart"></i>
                 </li>
                 <li>
-                    <a href="cartPage.html"  onmouseenter="showcart()" onmouseleave="hidecart()"><i class="fal fa-shopping-cart"><span id="qty">1</span></i></a>
+                    <a href="cartPage.html"><i class="fal fa-shopping-cart" id="showcart"><span id="qty">1</span></i></a>
                     <div class="hover_content1">
                         <div id="quickCart">
                             <div class="nItems">
@@ -71,9 +71,9 @@
                     </div>
                 </li>
                 <li id="signin">
-                    <a onclick="openSigninPage()" id="login_sucess">Sign In</a>
+                    <a id="login_sucess">Sign In</a>
                     <div class="hover_content">
-                        <div id="userHeading" onclick="openSigninPage()">
+                        <div id="userHeading">
                             <i class="fal fa-user-circle"></i><span id="login_sucess1">Login/Register</span>
                             <p>Join VIP club</p>
                         </div>
@@ -141,7 +141,7 @@
 
                 <!-- Mobiles & More dropdown options -->
 
-                <li id="nav1" onmouseover="mouseoverNavigation(`nav1`)" onmouseout="mouseoutNavigation(`nav1`)">
+                <li id="nav1">
                     <a href="ProductListPage.html">Mobiles & More</a>
                     <div class="menu_wrap">
                         <div class="ul_menu_block">
@@ -247,7 +247,7 @@
 
                 <!-- MEN dropdown options -->
 
-                <li id="nav2" onmouseover="mouseoverNavigation(`nav2`)" onmouseout="mouseoutNavigation(`nav2`)">
+                <li id="nav2">
                     <a href="">MEN</a>
                     <div class="menu_wrap">
                         <div class="ul_menu_block">
@@ -349,7 +349,7 @@
 
                 <!-- WOMEN dropdown options -->
 
-                <li id="nav3" onmouseover="mouseoverNavigation(`nav3`)" onmouseout="mouseoutNavigation(`nav3`)">
+                <li id="nav3">
                     <a href="">WOMEN</a>
                     <div class="menu_wrap">
                         <div class="ul_menu_block">
@@ -451,7 +451,7 @@
                 
                 <!-- HOME & KITCHEN dropdown options -->
 
-                <li id="nav4" onmouseover="mouseoverNavigation(`nav4`)" onmouseout="mouseoutNavigation(`nav4`)">
+                <li id="nav4">
                     <a href="">HOME & KITCHEN</a>
                     <div class="menu_wrap">
                         <div class="ul_menu_block">
@@ -550,7 +550,7 @@
 
                 <!-- APPLIANCES dropdown options -->
 
-                <li id="nav5" onmouseover="mouseoverNavigation(`nav5`)" onmouseout="mouseoutNavigation(`nav5`)">
+                <li id="nav5">
                     <a href="">APPLIANCES</a>
                     <div class="menu_wrap">
                         <div class="ul_menu_block">
@@ -617,7 +617,7 @@
 
                 <!-- SPORTS & MORE dropdown options -->
 
-                <li id="nav6" onmouseover="mouseoverNavigation(`nav6`)" onmouseout="mouseoutNavigation(`nav6`)">
+                <li id="nav6">
                     <a href="">SPORTS & MORE</a>
                     <div class="menu_wrap">
                         <div class="ul_menu_block">
@@ -716,7 +716,7 @@
 
                 <!-- ESSENTIALS dropdown options -->
 
-                <li id="nav7" onmouseover="mouseoverNavigation(`nav7`)" onmouseout="mouseoutNavigation(`nav7`)">
+                <li id="nav7">
                     <a href="">ESSENTIALS</a>
                     <div class="menu_wrap">
                         <div class="ul_menu_block">
@@ -799,7 +799,7 @@
 
                 <!-- OFFERS dropdown options -->
 
-                <li id="nav8" onmouseover="mouseoverNavigation(`nav8`)" onmouseout="mouseoutNavigation(`nav8`)">
+                <li id="nav8">
                     <a href="">OFFERS</a>
                     <div class="menu_wrap">
                         <div class="ul_menu_block">
@@ -928,8 +928,8 @@
             </div>
             <div id="page_signin">
                 <div id="select_op">
-                    <h2 onclick="showLogin()">LOGIN</h2>
-                    <h2 onclick="showRegister()">REGISTER</h2>
+                    <h2 id="showin">LOGIN</h2>
+                    <h2 id="showster">REGISTER</h2>
                     <button id="closetab"><i class="fal fa-times"></i></button>
                 </div>
                 <div class="signinShow">
