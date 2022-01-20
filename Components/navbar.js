@@ -35,7 +35,7 @@ let signOut = () => {
 
 // function to showcart
 let showcart = () => {
-    document.querySelector(".hover_content1").style.display = "block";
+    document.querySelector(".hover_content1").style.display = "inline-block";
 }
 
 // function to hidecart
@@ -43,9 +43,36 @@ let hidecart = () => {
     document.querySelector(".hover_content1").style.display = "none";
 }
 
-// functions for sign-in and regiser page
+// function for search bar
 
-// function to show login,register div
+let showResult = () => {
+
+    let input = document.getElementById("getinput").value;
+
+    if(input == "mobiles"){
+        window.location.href = "productListPage.html";
+    }
+}
+
+// function for scroll top button
+
+let lastscroll = 0;
+
+let arrow = document.querySelector(".uparrow");
+
+window.addEventListener("scroll", ()=> {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    if(scrollTop > lastscroll){
+        arrow.style.display = "block";
+    }
+    else{
+        arrow.style.display = "none";
+    }
+})
+
+
+// functions for sign-in and regiser page
 
 let div1 = document.querySelector(".signinShow");
 let div2 = document.querySelector(".signup");
@@ -81,6 +108,8 @@ let storedetail = document.getElementById("storedetail");
 
 storedetail.addEventListener("click", postData);
 
+let userdetail;
+
 async function postData(event){
 
     event.preventDefault();
@@ -94,7 +123,7 @@ async function postData(event){
         alert("Please fill all info");
     }
     else{
-        let userdetail = {
+        userdetail = {
             email,
             number,
             username,
@@ -115,20 +144,52 @@ async function postData(event){
             })
 
             let res = await responce.json();
-            console.log(res);
             if(res.error === true){
                 alert(res.message);
             }
             else{
                 alert(res.message);
+
+                div2.style.display = "none";
+                h2_2.style.color = "black";
+                h2_2.style.borderBottom = "none";
+
+                div1.style.display = "block";
+                h2_1.style.color = "#55b8c6";
+                h2_1.style.borderBottom = "2px solid #55b8c6";
             }
         }
         catch(err){
-            console.log(err);
+            if(err){
+                document.getElementById("Test_user").style.display = "inline-block";
+            }
         }
     }
     
 }
+
+// function for test user Registration
+
+let testuserRegister = (event) => {
+    event.preventDefault();
+    localStorage.setItem("userData", userdetail);
+
+    alert("Registration successfull");
+
+    div2.style.display = "none";
+    h2_2.style.color = "black";
+    h2_2.style.borderBottom = "none";
+
+    div1.style.display = "block";
+    h2_1.style.color = "#55b8c6";
+    h2_1.style.borderBottom = "2px solid #55b8c6";
+
+}
+
+let test = document.getElementById("Test_user");
+test.addEventListener("click",testuserRegister);
+
+
 
 // function for checking userdetail on masai server (login page)
 
@@ -136,10 +197,12 @@ let checkdetail = document.getElementById("checkdetail");
 
 checkdetail.addEventListener("click", checkData);
 
+let userData;
+
 async function checkData(event){
     event.preventDefault();
 
-    let userData = {
+    userData = {
         username : document.getElementById("username2").value,
         password : document.getElementById("password2").value, 
     };
@@ -163,9 +226,33 @@ async function checkData(event){
         document.getElementById("back").style.display = "none";
     }
     catch(err){
-        console.log(err);
+        if(err){
+            document.getElementById("login_test").style.display = "inline-block";
+        }
     }
 }
+
+// function for test user login
+
+let testuserlogin = (event) => {
+    event.preventDefault();
+    let data = JSON.parse(localStorage.getItem("userData"));
+
+    if(document.getElementById("username2").value == data.username && document.getElementById("password2").value == data.password){
+        alert("Login successfull");
+        document.getElementById("back").style.display = "none";
+        document.getElementById("login_sucess").textContent = data.username;
+        document.getElementById("login_sucess").style.fontSize = "12px";
+        document.getElementById("login_sucess1").textContent = `Welcome ${data.username}`;
+        document.getElementById("signout").style.display = "block";
+    }
+    else{
+        alert("invalid credentials");
+    }
+}
+
+let logtest = document.getElementById("login_test");
+logtest.addEventListener("click",testuserlogin);
 
 let getUser = async(user,token) => {
     let url = `https://masai-api-mocker.herokuapp.com/user/${user}`;

@@ -2,6 +2,7 @@
 /* footer */
 
 footer {
+    margin-top: 3%;
     display: grid;
     grid-template-rows: 350px 150px 700px 800px 60px;
 }

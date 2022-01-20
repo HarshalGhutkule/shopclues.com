@@ -3,6 +3,24 @@ body {
     margin: 0%;
 }
 
+::-webkit-scrollbar {
+    width: 7px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #24a3b5;
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px whitesmoke;
+    border-radius: 10px;
+  }
+  
+  ::selection {
+    color: #24a3b5;
+    background: whitesmoke;
+  }
+
 * {
     box-sizing: border-box;
     font-family: 'Segoe UI','Open Sans', 'Helvetica Neue', sans-serif;
@@ -12,14 +30,14 @@ body {
 
 .header {
     height: 80px;
-    border: 1px solid red;
     position: relative;
     width: 100%;
-    background: #fff;
+    background-color: #fff;
     left: 0;
     right: 0;
     top: 0;
     position: sticky;
+    z-index: 7;
 }
 
 #sellList {
@@ -27,7 +45,6 @@ body {
     width: 100%;
     float: right;
     text-align: right;
-    border: 1px solid red;
 }
 
 #sellList>ul {
@@ -41,6 +58,7 @@ body {
     font-size: 12px;
     color: #757575;
     margin-left: 2%;
+    cursor: pointer;
 }
 
 /* website logo */
@@ -49,12 +67,11 @@ body {
     display: inline-block;
     height: 75%;
     width: 18%;
-    border: 1px solid red;
 }
 
 #logo a>img {
     height: 100%;
-    padding: 5.5%;
+    padding: 6% 6% 6% 0%;
 }
 
 /* search box */
@@ -62,15 +79,15 @@ body {
     display: inline-block;
     height: 75%;
     width: 55%;
-    border: 1px solid red;
-    padding-top: 2.2%;
+    margin-right: -4%;
 }
 
 #searchBar > span input[type="text"] {
     width: 75%;
     background-color: #e9f6f7;
     height: 40px;
-    border-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
     background-clip: padding-box;
     border: #dbf0f2 solid 1px;
     font-size: 15px;
@@ -79,7 +96,7 @@ body {
     position: relative;
     z-index: 1;
     transition: all .2s ease-in-out;
-    top: -22px;
+    top: -24px;
 
 }
 
@@ -105,8 +122,7 @@ body {
 #sellListbtm {
     display: inline-block;
     height: 75%;
-    width: 26%;
-    border: 1px solid red;
+    width: 30%;
 }
 
 #sellListbtm>div {
@@ -116,9 +132,10 @@ body {
 
 #sellListbtm > ul > li {
     list-style: none;
-    margin-right: 30px;
+    margin-right: 36px;
     float: left;
     position: relative;
+    cursor: pointer;
 }
 
  li>i, li>a>i {
@@ -135,12 +152,16 @@ body {
     text-decoration: none;
 }
 
+#pin {
+    font-size: 12px;
+    font-weight: 500;
+}
+
 
 /* sign in dropdown option */
 
 .hover_content, .hover_content1 {
     display: none;
-    padding-top: 5px;
     transition: all .2s ease-in-out;
     top: 105%;
     right: 0%;
@@ -149,13 +170,14 @@ body {
     width: 238px;
     background: white;
     background-clip: padding-box;
-    border: 1px solid red;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 4px;
 }
 
 .hover_content1 {
     display: none;
     width: 430px;
-    padding: 0px;
+    padding: 0;
 }
 
 .hover_content>ul {
@@ -167,6 +189,7 @@ body {
 #signin {
     position: relative;
     top: -3px;
+    margin-right: 0%;
 }
 
 #signin>a {
@@ -209,7 +232,6 @@ body {
     width: 120%;
     position: relative;
     padding-top: 5%;
-    border: 1px solid red;
     margin-left: -20%;
     padding-left: 15%;
     font-size: 13px;
@@ -250,7 +272,6 @@ body {
     font-weight: 500;
     color: #212121;
 }
-
 
 .btnContainer {
     padding: 12px 15px;
@@ -296,7 +317,7 @@ body {
     right: -50%;
     height: 20px;
     width: 20px;
-    padding: 15% 20% 20% 25%;
+    padding: 12% 20% 20% 25%;
     font-size: 15px;
     font-weight: 600;
     border-radius: 50%;
@@ -309,7 +330,6 @@ body {
 /* main_navigation styling */
 
 .main_navigation {
-    border: 1px solid purple;
     display: block;
     text-align: center;
     position: relative;
@@ -318,6 +338,8 @@ body {
     left: 0;
     right: 0;
     background-color: #24a3b5;
+    position: fixed;
+    z-index: 1;
 }
 
 #wrapper {
@@ -325,11 +347,10 @@ body {
     min-width: 980px;
     height: 100%;
     position: relative;
-    border: 1px solid black;
 }
 
 #wrapper>ul {
-    margin-top: -0.2%;
+    margin-top: -0%;
 }
 
 .main_navigation #wrapper ul > li {
@@ -383,10 +404,6 @@ body {
     display: none;
 }
 
-.menu_wrap, .ul_menu_block, .s_col {
-    border: 1px solid orchid;
-}
-
 .main_navigation .menu_wrap .ul_menu_block {
     padding: 15px;
     overflow: hidden;
@@ -409,13 +426,18 @@ body {
     color: #757575;
 }
 
-.s_col>ul>li:hover {
-    cursor: pointer;
+.s_col>ul>li>a, #nav1 a {
+    text-decoration: none;
+    color: #757575;
+}
+
+.s_col>ul>li>a:hover,#nav1 a:hover{
     color: #24a3b5;
 }
 
-#nav1 {
-    top: -10px;
+.s_col>ul>li:hover {
+    cursor: pointer;
+    color: #24a3b5;
 }
 
 
@@ -547,4 +569,26 @@ h3 {
     border: none;
     background-color: white;
     cursor: pointer;
+}
+
+#login_test, #Test_user {
+    display: none;
+}
+
+/* scroll top button */
+
+.uparrow {
+    width: 66px;
+    height: 66px;
+    text-align: center;
+    text-decoration: none;
+    position: fixed;
+    bottom: 55px;
+    right: 20px;
+    display: none;
+    background: url(//images.shopclues.com/images/ui//scrolltop_teal.png) no-repeat 0 -74px;
+    z-index: 999;
+    text-indent: -999px;
+    overflow: hidden;
+    display: none;
 }

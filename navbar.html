@@ -26,7 +26,7 @@
         <!-- website logo -->
 
         <div id="logo">
-            <a href="">
+            <a href="index.html">
                 <img src="https://images.shopclues.com/images/ui/shopclues_logo@2x.png" alt="logo">
             </a>
         </div>
@@ -35,8 +35,8 @@
 
         <div id="searchBar">
             <span>
-                <input type="text" placeholder="What is on your mind today?">
-                <button class="srch_btn">Search</button>
+                <input type="text" placeholder="What is on your mind today?" id="getinput">
+                <button onclick="showResult()" class="srch_btn">Search</button>
             </span>
         </div>
 
@@ -45,7 +45,7 @@
         <div id="sellListbtm">
             <ul>
                 <li>
-                    <i class="fal fa-map-marker-alt"></i>
+                    <span id="pin">421005</span><i class="fal fa-map-marker-alt"></i>
                 </li>
                 <li>
                     <i class="far fa-bell"></i>
@@ -54,8 +54,8 @@
                     <i class="far fa-heart"></i>
                 </li>
                 <li>
-                    <a href="" class="shopCart" onmouseover="showcart()" onmouseout="hidecart()"><i class="fal fa-shopping-cart"><span id="qty">1</span></i></a>
-                    <div class="hover_content hover_content1">
+                    <a href="cartPage.html"  onmouseenter="showcart()" onmouseleave="hidecart()"><i class="fal fa-shopping-cart"><span id="qty">1</span></i></a>
+                    <div class="hover_content1">
                         <div id="quickCart">
                             <div class="nItems">
                                 
@@ -142,22 +142,22 @@
                 <!-- Mobiles & More dropdown options -->
 
                 <li id="nav1" onmouseover="mouseoverNavigation(`nav1`)" onmouseout="mouseoutNavigation(`nav1`)">
-                    <a href="">Mobiles & More</a>
+                    <a href="ProductListPage.html">Mobiles & More</a>
                     <div class="menu_wrap">
                         <div class="ul_menu_block">
                             <div id="column_1" class="s_col">
                                 <ul>
-                                    <li><strong>Smartphones & Tablets</strong></li>
-                                    <li>I KALL</li>
-                                    <li>Mi</li>
-                                    <li>Realme</li>
-                                    <li>Samsung</li>
-                                    <li>Vivo</li>
-                                    <li>Oppo</li>
-                                    <li>Apple</li>
-                                    <li>Techno</li>
-                                    <li>Infinix</li>
-                                    <li>Micromax</li>
+                                    <li><strong><a href="ProductListPage.html">Smartphones & Tablets</a></strong></li>
+                                    <li><a href="ProductListPage.html">I KALL</a></li>
+                                    <li><a href="ProductListPage.html">Mi</a></li>
+                                    <li><a href="ProductListPage.html">Realme</a></li>
+                                    <li><a href="ProductListPage.html">Samsung</a></li>
+                                    <li><a href="ProductListPage.html">Vivo</a></li>
+                                    <li><a href="ProductListPage.html">Oppo</a></li>
+                                    <li><a href="ProductListPage.html">Apple</a></li>
+                                    <li><a href="ProductListPage.html">Techno</a></li>
+                                    <li><a href="ProductListPage.html">Infinix</a></li>
+                                    <li><a href="ProductListPage.html">Micromax</a></li>
                                     <br>
                                     <li><strong>Refurbished Smartphones</strong></li>
                                     <br><br>
@@ -904,6 +904,7 @@
 
 
     <!-- popup Window signin and regiser page -->
+
     <div id="back">
         <div class="popup_signin">
             <div class="points">
@@ -938,6 +939,7 @@
                         <input type="password" placeholder="Enter your password" id="password2">
                         <br><br>
                         <input type="submit" value="Login" id="checkdetail">
+                        <input type="submit" value="login test" id="login_test">
                     </form>
                     <h3>Social Login</h3>
                     <button>Continue with Facebook</button>
@@ -953,6 +955,7 @@
                         <input type="password" placeholder="Enter your password" id="password1">
                         <br><br>
                         <input type="submit" value="Register" id="storedetail">
+                        <input type="submit" value="Test user" id="Test_user">
                     </form>
                     <h3>Register With</h3>
                     <button>Continue with Facebook</button>
@@ -1300,6 +1303,10 @@
             </div>
         </div>
     </footer>
+
+    <!-- scroll top button -->
+
+    <a href="" class="uparrow"></i></a>
 </body>
 </html>
 <script src="./Components/navbar.js"></script>
