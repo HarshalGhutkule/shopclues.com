@@ -134,7 +134,7 @@ input[type="checkbox"] {
   font-weight: 600;
   color: #353535;
 }
-.discount-div ul, .price-div ul, .prod-rating ul, .avail-div ul, .brand ul, .item-cond ul, .cat-inside ul a{
+.discount-div ul, .price-div ul, .prod-rating ul, .avail-div ul, .brand ul, .item-cond ul, .cat-inside ul a, .cod-out+label{
   color: #757575;
 }
 .flex > span {
