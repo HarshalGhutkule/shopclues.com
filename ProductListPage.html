@@ -4,26 +4,43 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style/ProductListPage.css" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="./Style/ProductListPage.css" />
+    <link rel="stylesheet" href="./Style/navbar.css">
+    <link rel="stylesheet" href="./Style/footer.css">
+    <title>Shopclues</title>
   </head>
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
   />
   <body>
+    <div class="navbar"></div>
+    <div id="promodiv">
+      <div id="promowrap">
+        <ul>
+          <li>Time Sale</li>
+          <li>Flu Care</li>
+          <li>Food & Beverage</li>
+          <li>Personal Hygiene</li>
+          <li>Home Cleaning</li>
+          <li>Nutrition & Supplements</li>
+          <li>Kitchen & Dining</li>
+          <li>Refurbished Mobiles</li>
+          <li>Mobile Accessories</li>
+        </ul>
+      </div>
+    </div>
     <div id="cont">
       <div id="side-div">
         <div class="cat-div">
           <div class="cat-inside">
             <div class="flex">Category Filters</div>
             <ul>
-              <a href=""><span>Home</span></a>
-              <a href=""><span>Mobile&Tablets</span></a>
+              <a href=""><span>Mobile & Tablets</span></a>
             </ul>
           </div>
         </div>
-        <hr />
         <div class="discount-div">
           <div class="flex">
             Discount
@@ -50,7 +67,6 @@
             <label for="">More than 80% </label>
           </ul>
         </div>
-        <hr />
         <div class="price-div">
           <div class="flex">
             Price
@@ -65,7 +81,6 @@
             <label for="">Above 5000</label>
           </ul>
         </div>
-        <hr />
         <div class="prod-rating">
           <div class="flex">
             Product Rating
@@ -88,7 +103,6 @@
             <label for="">1 & Above(10)</label>
           </ul>
         </div>
-        <hr />
         <div class="avail-div">
           <div class="flex">
             Availability
@@ -99,7 +113,6 @@
             <label for="">Include out of stock</label>
           </ul>
         </div>
-        <hr />
         <div class="cod">
           <div class="flex">
             CoD
@@ -110,7 +123,6 @@
             <label for="">Only Cod products(29)</label>
           </ul>
         </div>
-        <hr />
         <div class="brand">
           <div class="flex">
             Brand
@@ -142,7 +154,6 @@
           </ul>
           <span>View All</span>
         </div>
-        <hr />
         <div class="item-cond">
           <div class="flex">
             Items condition
@@ -165,20 +176,33 @@
           </div>
           <div class="product-found">
             <p>30 Products found</p>
-            <ul>
+            <ul id="sortby">
               <span>Sort By:</span>
-              <span id="high-price">High Price</span>
-              <span id="low-price">Low price</span>
-              <span><a href="#">Popular Products</a></span>
-              <span><a href="#">Best Selling</a></span>
+              <span id="high-price">High Price |</span>
+              <span id="low-price">Low price |</span>
+              <span><a href="#">Popular Products |</a></span>
+              <span><a href="#">Best Selling |</a></span>
               <span><a href="#">New Arrivals</a></span>
             </ul>
           </div>
         </div>
-        <hr />
         <div id="list_div"></div>
       </div>
     </div>
+    <div class="footer"></div>
   </body>
 </html>
-<script src="./script/ProductListPage.js"></script>
+<script src="./Script/ProductListPage.js"></script>
+<script src="./Script/navbarJS.js"></script>
+<script type="module">
+
+  import navbar from "./Component/navbar.js"
+  import footer from "./Component/footer.js"
+
+  let nav = document.querySelector(".navbar");
+  let ft = document.querySelector(".footer");
+
+  nav.innerHTML = navbar();
+  ft.innerHTML = footer();
+
+</script>

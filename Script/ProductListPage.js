@@ -27,14 +27,14 @@ let mobileData = JSON.parse(localStorage.getItem("productData"));
               />
             </div>
             <div>
-              <p>${el.title}</p>
+              <p id="shipping">${el.title}</p>
               <div class="new-price">
-                <span class="p-price">₹ ${el.price}</span>
-                <span class="prd-discount">${el.discount} % off</span>
+                <span class="p-price">₹${el.price}</span>
+                <span class="prd-discount">${el.discount}%Off</span>
               </div>
               <div class="old-price">
-                <span>${Math.floor(Math.random() * (4000 - 3000) + 3000)}</span>
-                <span>${Math.floor(
+                <span>₹${Math.floor(Math.random() * (4000 - 3000) + 3000)}</span>
+                <span>₹${Math.floor(
                   Math.random() * (10000 - 6000) + 6000
                 )}</span>
               </div>
@@ -45,7 +45,7 @@ let mobileData = JSON.parse(localStorage.getItem("productData"));
                 <span class="fa fa-star"></span>
                 <span class="fa fa-star"></span>
               </div>
-              <p>Free Shipping</p>
+              <p id="shipping"><i class="fal fa-truck"></i>Free Shipping</p>
             </div>
           </div>`;
         location.innerHTML = x;
