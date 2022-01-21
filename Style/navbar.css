@@ -176,7 +176,7 @@ body {
 
 .hover_content1 {
     display: none;
-    width: 430px;
+    width: 300px;
     padding: 0;
 }
 
@@ -300,7 +300,7 @@ body {
 
 .listItem {
     overflow: auto;
-    display: flex;
+    display: block;
 }
 
 .listItem>div>img {

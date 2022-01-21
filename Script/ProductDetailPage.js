@@ -750,3 +750,212 @@ function min40offfxnAuto(){
 }
     min40offfxnAuto();
 
+
+    // get data from local storage
+    let tosend = JSON.parse(localStorage.getItem("productDetail"));
+    let {image,price,discount,title} = JSON.parse(localStorage.getItem("productDetail"));
+    let productappend = document.querySelector(".second-box");
+    let imgappend = document.querySelector(".box1");
+
+    addproduct();
+
+    function addproduct(){
+
+        y = `<img
+        class="big-img"
+        src="${image}"
+        alt="mobile phone"/>`
+
+
+        x = `<h3 class="heading">${title}</h3>
+        <span id="spanof"><a href="iTel">iTel</a> Product Id : 151942655</span><br />
+        <span  id="spanof" 
+          ><div class="star">5 &#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          (1)
+          <a href="Be the first to write a review"
+            >Be the first to write a review</a
+          ></span
+        >
+        <span  id="spanof" class="price1"
+          ><h2 class="price">₹${price}</h2>
+          <h2><del>₹${+price+101}</del></h2>
+          <p class="mrp">MRP:</p>
+          <h2><del>₹${+price+4375}</del></h2>
+          <p class="discount">${discount}% off</p></span>
+        <p id="">Inclusive of all taxes</p>
+        <div class="super_discount" id="from_js">
+          <div class="discount_head">
+            <span id="spanof" ><i></i>Deal Price
+            ><a href="javascript:void(0);" id="cb_popup" onclick="showinfobox()"
+              >How to earn CluesBucks<sup>+</sup><i class="iota"></i></a></span>
+          </div>
+          <div class="discount_table">
+            <table width="100%">
+              <thead>
+                <tr>
+                  <th class="brd_rt brd_lt brd_tp">Original Price</th>
+                  <th class="no-padding">
+                    <table width="100%">
+                      <tbody>
+                        <tr>
+                          <th
+                            colspan="2"
+                            height="22"
+                            class="brd_rt brd_tp no-padding">
+                            Applicable for All Users
+                          </th>
+                        </tr>
+                        <tr>
+                          <th class="brd_tp" width="50%">
+                            Discount by
+                            <span  id="spanof" class="success">cluesbucks<sup>+</sup></span>
+                          </th>
+                          <th class="brd_rt brd_tp" width="50%">
+                            Use Coupon <span id="spanof"  class="success">EXTRA12</span>
+                          </th>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </th>
+                  <th>Deal Price</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="brd_rt brd_lt brd_btm">
+                    ₹${price} <i class="fas fa-minus"></i>
+                  </td>
+                  <td class="brd_btm no-padding">
+                    <table width="100%">
+                      <tbody>
+                        <tr>
+                          <td class="brd_tp" width="50%">
+                            (₹200 <i class="fas fa-plus"></i>
+                          </td>
+                          <td class="brd_rt brd_tp" width="50%">
+                            ₹899) <i class="fas fa-equals"></i>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                  <td class="deal_price">₹${+price-(200+899)}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <!-- <div class="deal"></div> -->
+        <p class="text">*All discounts can be availed in the cart page</p>
+        <span id="spanof" 
+          ><img
+            class="diamond"
+            src="https://images.shopclues.com/images/ui/loyalty_diamond.png"
+            alt=""
+          />
+          <p class="plus">Extra CluesBucks+</p>
+          <p class="club">only on VIP Club.</p>
+          <a href=" Join Now"> Join Now</a></span
+        >
+        <span  id="spanof" class="ul"
+          ><ul>
+            <li>Facility : With Calling</li>
+          </ul>
+          <ul>
+            <li>Display Size : 7 inches(17.78 cm)</li>
+          </ul>
+        </span>
+        <ul class="storage">
+          <li>OS Name : Android Pie 9.0</li>
+        </ul>
+        <a href="More Specification" class="more">More Specification</a>
+        <p class="emi"><i class="fal fa-badge-percent"></i>Emi starts at 423</p>
+        <span id="spanof" 
+          ><p class="offer"><i class="fas fa-tags"></i> 4 offers Available for you</p>
+          <a href="+3 More">+3 More</a></span
+        >
+        <span id="spanof" 
+          ><p class="prepaid">PREPAID100</p>
+          <p class="order">Get Flat Rs 100 off On Prepaid Orders</p></span
+        >
+        <span id="spanof" 
+          ><p class="code">
+            Use Code "PREPAID100" Min. Cart Value ₹1000 | Max. Discount ₹100
+            <a href="T&C" class="tc">T&C</a>
+          </p></span
+        >
+        <span id="spanof" 
+          ><button class="add">ADD TO CART</button
+          ><button class="buy">BUY NOW</button></span
+        >
+        <span id="spanof" 
+          ><input
+            id="pincode"
+            type="text"
+            placeholder="Enter pincode for delivery"
+          />
+          <button class="check">Check</button></span
+        >
+        <span id="spanof" 
+          ><p class="cod">COD</p>
+          <p class="not" id="avi">Not Available</p>
+          <p class="cod" id="ship">Shipping:</p>
+          <p class="not" id="removezero">₹0</p>
+          <p class="cod">Delivery:</p>
+          <p class="not" id="delIn2days">2-5 Business Days</p></span
+        >
+        <p class="easy"><i class="fas fa-undo-alt"></i> Easy Returns & Replacement</p>
+        <p class="easy">
+          <i class="far fa-credit-card"></i> Payment Options: (Credit Card , Debit Card , Net Banking , Wallets ,
+          EMI )
+        </p>`
+
+        productappend.innerHTML = x;
+        imgappend.innerHTML = y;
+    }
+
+
+    // function for add to cart data
+
+    let addtoCart = document.querySelector(".add");
+
+    addtoCart.addEventListener("click", addtocart);
+    let arraytocart = JSON.parse(localStorage.getItem("cartData")) || [];
+    function addtocart(){
+        arraytocart.push(tosend);
+        localStorage.setItem("cartData", JSON.stringify(arraytocart));
+        window.location.reload();
+    }
+
+      // function for button buy now 
+
+    let buynowP = document.querySelector(".buy");
+
+    buynowP.addEventListener("click", buynow);
+    function buynow(){
+        arraytocart.push(tosend);
+        localStorage.setItem("cartData", JSON.stringify(arraytocart));
+        window.location.href = "Payment.html";
+    }
+
+    // function to check location
+
+    
+
+    let checkloc = document.querySelector(".check");
+
+    checkloc.addEventListener("click",()=>{
+        let locationValue = document.getElementById("pincode").value;
+        if(locationValue == 421005){
+            document.getElementById("avi").textContent = "Available";
+            document.getElementById("ship").textContent = "Free Shipping";
+            document.getElementById("removezero").textContent = null;
+            document.getElementById("delIn2days").textContent = "Tue 25 Jan - Fri 28 Jan";
+        }
+        else{
+            document.getElementById("avi").textContent = "Not Available";
+            document.getElementById("ship").textContent = "Shipping";
+            document.getElementById("removezero").textContent = "Not Available";
+            document.getElementById("delIn2days").textContent = null;
+        }
+    })

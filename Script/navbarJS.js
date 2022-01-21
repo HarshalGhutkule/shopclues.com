@@ -315,6 +315,8 @@ let signOut = () => {
     document.getElementById("login_sucess").style.fontSize = "16px";
     document.getElementById("login_sucess1").textContent = "Login/Register";
     document.getElementById("signout").style.display = "none";
+    localStorage.setItem("cartData",JSON.stringify(""));
+    window.location.reload();
 }
 document.getElementById("signout").addEventListener("click",signOut);
 
@@ -356,14 +358,13 @@ let appendCartdata = () => {
 
     let x = "";
 
-    data.forEach(({name,image,price,qty},index)=>{
+    data.forEach(({title,image,price},index)=>{
         x += `<div>
                 <img src="${image}" alt="">
             </div>
             <div id="rs">
-                <p>${name}</p>
+                <p>${title}</p>
                 <p>Rs.${price}</p>
-                <p>Qty:${qty}</p>
             </div>`
 
         location.innerHTML = x;

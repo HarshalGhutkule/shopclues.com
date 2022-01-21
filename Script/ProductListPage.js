@@ -53,6 +53,7 @@ let mobileData = JSON.parse(localStorage.getItem("productData"));
         mobile_name.forEach((el, i) => {
           el.addEventListener("click", () => {
             localStorage.setItem("productDetail", JSON.stringify(d[i]));
+            window.location.href = "ProductDetailPage.html";
           });
         });
       });
