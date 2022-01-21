@@ -2,7 +2,8 @@
 /* footer */
 
 footer {
-    margin-top: 3%;
+    border-top: 1px solid #e8e8e8;
+    margin-top: 10%;
     display: grid;
     grid-template-rows: 350px 150px 700px 800px 60px;
 }
