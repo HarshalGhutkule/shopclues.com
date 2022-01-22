@@ -45,7 +45,7 @@ function navbar(){
                     <i class="far fa-heart"></i>
                 </li>
                 <li>
-                    <a href="cartPage.html"><i class="fal fa-shopping-cart" id="showcart"><span id="qty">1</span></i></a>
+                    <a href="CartPage.html"><i class="fal fa-shopping-cart" id="showcart"><span id="qty">1</span></i></a>
                     <div class="hover_content1">
                         <div id="quickCart">
                             <div class="nItems">
