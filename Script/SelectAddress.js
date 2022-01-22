@@ -33,11 +33,11 @@ function savedata(event){
     }
 
     let phonenumber = document.getElementById("phonenumber").value;
-
+    console.log(phonenumber);
     if(phonenumber == ""){
         document.getElementById("phonenumberalert").style.display = "block";
         document.getElementById("phonenumberalert").style.marginLeft = "380px";
-        document.getElementById("phonenumberalert").style.marginTop = "-12px";
+        document.getElementById("phonenumberalert").style.marginTop = "0px";
     }
 
     let house = document.getElementById("house").value;
@@ -46,7 +46,7 @@ function savedata(event){
         document.getElementById("housealert").style.display = "block";
     }
 
-    else{
+    else if(pincode.length = 6 && city != "" && state != "" && name != "" && phonenumber != "" && house != ""){
         let gst = document.getElementById("gst").value;
         let street = document.getElementById("street").value;
 

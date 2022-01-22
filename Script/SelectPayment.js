@@ -17,6 +17,7 @@
       setTimeout(timeout,2000);
 
       function timeout(){
+        localStorage.setItem("cartData",JSON.stringify(""));
         window.alert("Payment successfull");
         window.location.href = "index.html";
       }

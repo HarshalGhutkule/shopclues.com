@@ -86,7 +86,7 @@ function appendData(){
             total.textContent=`Rs${count*price}`;
 
         }
-        function subs(price,one,two,three){
+        function subs(price){
             if(count>=2){ 
             count--;
             num.textContent=count;

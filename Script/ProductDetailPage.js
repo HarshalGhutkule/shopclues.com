@@ -659,6 +659,7 @@ function min40offfxnAuto(){
 
 
     // get data from local storage
+
     let tosend = JSON.parse(localStorage.getItem("productDetail"));
     let {image,price,discount,title} = JSON.parse(localStorage.getItem("productDetail"));
     let productappend = document.querySelector(".second-box");
@@ -884,7 +885,8 @@ function min40offfxnAuto(){
     function buynow(){
         arraytocart.push(tosend);
         localStorage.setItem("cartData", JSON.stringify(arraytocart));
-        window.location.href = "Payment.html";
+        localStorage.setItem("paymentAmount", JSON.stringify(`Rs ${price}`));
+        window.location.href = "SelectAddress.html";
     }
 
     // function to check location
