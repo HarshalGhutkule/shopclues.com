@@ -1,13 +1,19 @@
 
+
+// function to append cart data
+
 let getdata = JSON.parse(localStorage.getItem("cartData"));
 let locationof = document.getElementById("append");
 
-console.log(getdata);
 
 appendData();
 
 function appendData(){
     let x = "";
+    let tt = 0;
+    for(let i=0; i<getdata.length; i++){
+        tt += +getdata[i].price;
+    }
     getdata.forEach(({title,price,image})=>{
 
         document.querySelector(".heading").innerHTML = `My Cart ( ${getdata.length} Item )`;
@@ -22,7 +28,7 @@ function appendData(){
         <div class="text">
             <span class="box1-1">
                 <p class="product">${title}</p>
-                <p  onclick="subs()" id="minus">-</p><p id="number">1</p><p  onclick="add()" class="plus">+</p>
+                <p id="minus">-</p><p id="number">1</p><p class="plus">+</p>
                 <p class="price">Price :</p>
                 <p class="rate">Rs${price}</p>
                 <p  id="money">Rs${price}</p>
@@ -38,36 +44,66 @@ function appendData(){
     </div>`
 
         locationof.innerHTML = x;
+        let grandT=document.getElementById("amount");
+        let total=document.getElementById("rs");
+        let totalPrice=document.getElementById("money");
+
+        grandT.textContent=`Rs${tt}`;
+
+        total.textContent=`Rs${tt}`;
+
+        let removefromcart = document.querySelectorAll(".remove");
+        removefromcart.forEach((el,index)=>{
+            el.addEventListener("click",()=>{
+                getdata.splice(index,1);
+                localStorage.setItem("cartData", JSON.stringify(getdata));
+                window.location.reload();
+            })
+        })
+        let addof = document.querySelectorAll(".plus");
+        
+        addof.forEach((el)=>{
+            el.addEventListener("click",add.bind(null,price));
+
+        });
+        let subof = document.querySelectorAll("#minus");
+        subof.forEach((el)=>{
+
+            el.addEventListener("click",subs.bind(null,price));
+        })
+
+        var count=1;
+        let num=document.getElementById("number");
+
+        function add(price){
+            count++;
+            num.textContent=count;
+            
+            totalPrice.textContent=`Rs${count*price}`;
+
+            grandT.textContent=`Rs${count*price}`;
+
+            total.textContent=`Rs${count*price}`;
+
+        }
+        function subs(price,one,two,three){
+            if(count>=2){ 
+            count--;
+            num.textContent=count;
+
+            totalPrice.textContent=`Rs${count*price}`;
+        
+            grandT.textContent=`Rs${count*price}`;
+
+            total.textContent=`Rs${count*price}`;
+        }
+        }
     })
 }
 
-var count=1;
-let num=document.getElementById("number");
 
-function add(){
-    count++;
-    num.textContent=count;
-    let totalPrice=document.getElementById("money");
-    totalPrice.textContent=`Rs${count*7490}`;
-    let grandT=document.getElementById("amount");
-    grandT.textContent=`Rs${count*7490}`;
+// function to change pin code
 
-    let total=document.getElementById("rs");
-    total.textContent=`Rs${count*7490}`;
-}
-function subs(){
-    if(count>=2){ 
-    count--;
-    num.textContent=count;
-    let totalPrice=document.getElementById("money");
-    totalPrice.textContent=`Rs${count*7490}`;
-    let grandT=document.getElementById("amount");
-    grandT.textContent=`Rs${count*7490}`;
-
-    let total=document.getElementById("rs");
-    total.textContent=`Rs${count*7490}`;
-}
-}
 function pincodeChange(){
     let inPin=document.getElementById("pc").value;
     let picode=document.getElementById("pincode");
@@ -86,4 +122,19 @@ function pincodeChange(){
     div.append(img,div2);
     picode.append(div);
 }
+
+
+// function to place order
+
+let btn = document.querySelector(".place");
+
+btn.addEventListener("click", ()=>{
+    let paymentdata = getdata;
+
+    let paymentAmt = document.getElementById("amount").textContent;
+
+    localStorage.setItem("paymentdata", JSON.stringify(paymentdata));
+    localStorage.setItem("paymentAmount", JSON.stringify(paymentAmt));
+    window.location.href = "SelectAddress.html";
+})
 
