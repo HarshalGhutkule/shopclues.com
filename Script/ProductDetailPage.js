@@ -700,6 +700,9 @@ function min40offfxnAuto(){
       if(newtitle[i] == "Tecno"){
         document.querySelector(".brandofproduct").textContent = `: ${newtitle[i]}`;
       }
+      if(newtitle[i] == "Samsung"){
+        document.querySelector(".brandofproduct").textContent = `: ${newtitle[i]}`;
+      }
     }
 
     addproduct();

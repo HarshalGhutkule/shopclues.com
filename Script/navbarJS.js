@@ -1,5 +1,5 @@
 
-setTimeout(timeout,100);
+setTimeout(timeout,300);
 
 function timeout(){
     

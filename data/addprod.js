@@ -1,22 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <input id="name" type="text" placeholder="enter title" />
-    <input id="price" type="number" placeholder="price" />
-    <input id="image" type="text" placeholder="image" />
-    <input id="desc" type="text" placeholder="desc" />
-    <br />
-    <button onclick="addData()" id="btn">Add Product</button>
-  </body>
-</html>
 
-<script>
       let dataArr = [
       {
           "title": "VZ Super Tech 118 7inch Calling Tablet",
@@ -229,19 +211,9 @@
           "discount": 28
       }
   ]
-  localStorage.setItem("productData", JSON.stringify(dataArr));
-  // let dataArr = [];
-  // function addData() {
-  //   let obj = {
-  //     title: document.getElementById("name").value,
-  //     price: document.getElementById("price").value,
-  //     image: document.getElementById("image").value,
-  //     description: document.getElementById("desc").value,
-  //     discount: Math.floor(Math.random() * (60 - 20) + 20),
-  //   };
-  //   dataArr.push(obj);
-  //   localStorage.setItem("productData", JSON.stringify(dataArr));
-  // }
 
-  
-</script>
+  function adddatatolocalstorage(){
+    localStorage.setItem("productData", JSON.stringify(dataArr));
+  }
+
+  export default adddatatolocalstorage;
