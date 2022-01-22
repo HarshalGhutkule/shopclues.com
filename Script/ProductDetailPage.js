@@ -37,13 +37,10 @@ function openCity(evt, cityName) {
 
 
     //prices
-     let NAprice=['₹1699','₹19999','₹1299','₹1199','₹1199']
-
-
-
-
-
-
+     let NAprice=['₹1699','₹1999','₹39999','₹6999','₹1199']
+     let NAprice1=['₹4373','₹5999','₹5999','₹6999','₹7899']
+     let NAprice2=['₹11999','₹13999','₹1999','₹2999','₹10999']
+     let NAprice3=['₹9999','₹12999','₹10999','₹8999','₹14999']
 
 
     var array=['https://cdn.shopclues.com/images1/thumbnails/74865/320/320/131046271-74865163-1552367251.jpg',
@@ -56,7 +53,7 @@ function openCity(evt, cityName) {
          'https://cdn.shopclues.com/images1/thumbnails/113568/320/320/152145532-113568220-1617952712.jpg'
 
          ]
-         console.log(array.length)
+
     let bestsellingarr=['https://cdn.shopclues.com/images/thumbnails/3830/320/320/VZ7211448452444.jpg',
                     'https://cdn.shopclues.com/images1/thumbnails/114310/320/320/152360066-114310317-1622204714.jpg',
                     'https://cdn.shopclues.com/images/thumbnails/2209/320/320/pentasmartps650301035382820640x3601387619730.jpg',
@@ -125,7 +122,7 @@ function min40offfxn(){
         off.style.fontSize="23px";
         off.style.color="#24a3b5";
         off.style.fontWeight="600";
-        off.textContent="20% Off";
+        off.textContent="40% Off";
         off.style.paddingBottom="1px"
 
 
@@ -133,7 +130,6 @@ function min40offfxn(){
         var div = document.createElement("div");
         div.style.width = "20%";
         div.style.height = "100%";
-        // div.style.border = "1px solid black";
         
         let img = document.createElement("img");
         img.src = array[i];
@@ -154,11 +150,8 @@ function min40offfxn(){
 
 
      
-          console.log("yes")
           var dox=document.getElementById('bottombox');
         
-        //  var obj={
-        //  }
     
    autoDis(array);
 
@@ -178,10 +171,6 @@ function autoDis(arrays){
         div.style.height = "100%";
         div.style.marginLeft = "2%"
         div.classList.add()
-        // div.style.border = "1px solid black";
-
-
-
 
         let price=document.createElement("p");
         price.style.fontSize="18px";
@@ -195,7 +184,7 @@ function autoDis(arrays){
         off.style.fontSize="15px";
         off.style.color="#24a3b5";
         off.style.fontWeight="600";
-        off.textContent="20% Off";
+        off.textContent="40% Off";
         off.style.paddingBottom="1px"
        
         
@@ -217,11 +206,7 @@ function autoDis(arrays){
     // moveInd(bestsellingarr);
    // best selling products
    function bestsellingpro(){
-    //   bestselling.style.color="#24a3b5";
-    //  min40off.style.color="black";
-      
-      
-    //    let move=document.getElementById("arrow").addEventListener('click',moveInd);
+
        dox.innerHTML="";
        l = l + 1;
       m = m + 1;
@@ -234,7 +219,7 @@ function autoDis(arrays){
         price.style.lineHeight="20px";
         price.style.color="#212121";
         price.style.fontWeight="500"
-        price.textContent=NAprice[i];
+        price.textContent=NAprice1[i];
 
 
         let off=document.createElement('flag');
@@ -250,7 +235,6 @@ function autoDis(arrays){
         div.style.height = "100%";
         div.style.marginLeft = "2%"
         div.classList.add("display4")
-        // div.style.border = "1px solid black";
         
         let img = document.createElement("img");
         let h4=document.createElement('h4');
@@ -290,11 +274,7 @@ var tabarr=[
 
 
 function tabletsfxn(){
-    // bestselling.style.color="#24a3b5";
-    //  min40off.style.color="black";
-      
-     
-    //    let move=document.getElementById("arrow").addEventListener('click',moveInd);
+
        dox.innerHTML="";
        l = l + 1;
       m = m + 1;
@@ -304,7 +284,6 @@ function tabletsfxn(){
         div.style.width = "20%";
         div.style.height = "100%";
         div.style.marginLeft = "2%"
-        // div.style.border = "1px solid black";
 
 
         let price=document.createElement("p");
@@ -313,7 +292,7 @@ function tabletsfxn(){
         price.style.lineHeight="20px";
         price.style.color="#212121";
         price.style.fontWeight="500"
-        price.textContent=NAprice[i];
+        price.textContent=NAprice3[i];
 
 
         let off=document.createElement('flag');
@@ -324,9 +303,6 @@ function tabletsfxn(){
         off.style.paddingBottom="1px"
         off.style.paddingTop="3px";
 
-
-
-        
         let img = document.createElement("img");
         let h4=document.createElement('h4');
         h4.style.fontWeight = "500";
@@ -345,7 +321,6 @@ function tabletsfxn(){
 }
 function newarrivalsfxn(){
   
-    //    let move=document.getElementById("arrow").addEventListener('click',moveInd);
        dox.innerHTML="";
        l = l + 1;
       m = m + 1;
@@ -356,7 +331,6 @@ function newarrivalsfxn(){
         div.style.height = "100%";
         div.style.marginLeft = "2%"
         div.classList.add("display3")
-        // div.style.border = "1px solid black";
         
         let price=document.createElement("p");
         price.style.fontFamily="Roboto, Arial, Helvetica, sans-serif";
@@ -364,7 +338,7 @@ function newarrivalsfxn(){
         price.style.lineHeight="20px";
         price.style.color="#212121";
         price.style.fontWeight="500"
-        price.textContent=NAprice[i];
+        price.textContent=NAprice2[i];
 
 
         let off=document.createElement('flag');
@@ -433,7 +407,6 @@ function secondArrAppend(){
     //also bought div
     let alsoDiv=document.getElementById("display2");
     function alsobought(){
-    console.log('essss');
     let l = -1;
     let m = 4;
         console.log(l,m);
@@ -447,7 +420,6 @@ function secondArrAppend(){
         div.style.height = "100%";
         div.style.marginLeft = "2%";
         div.classList.add('display3')
-        // div.style.border = "1px solid black";
         
         let img = document.createElement("img");
         img.src = array[i];
@@ -468,12 +440,6 @@ function secondArrAppend(){
         p.textContent = "dummy";
         div.append(img,h4,price);
         alsoDiv.append(div);
-        // div.addEventListener('mouseover',transition);
-       
-    //   function transition(){
-    // console.log("working");
-    // img.style.transform="scale(1.1)"
-    //   }
 }
 }
 function min40offfxn(){
@@ -510,7 +476,6 @@ function min40offfxn(){
         div.style.height = "100%";
         div.classList.add("display3");
         div.style.marginLeft = "2%";
-        // div.style.border = "1px solid black";
         
         let img = document.createElement("img");
         img.src = array[i];;
@@ -563,8 +528,6 @@ let alsoboughtFakeP=[
 let s=0;
 let n=5;
 function min40offfxn4(){
-    console.log('essss');
-   
    
         console.log(l,m);
         let dox2=document.getElementById('display3')
@@ -576,26 +539,6 @@ function min40offfxn4(){
         dox2.innerHTML="";
     }
       for (let i = s; i < n; i++) {
-
-       
-        // let price=document.createElement("p");
-        // price.style.fontFamily="Roboto, Arial, Helvetica, sans-serif";
-        // price.style.fontSize="20px";
-        // price.style.lineHeight="20px";
-        // price.style.color="#212121";
-        // price.style.fontWeight="600"
-        // price.textContent=NAprice[i];
-
-
-        // let off=document.createElement('flag');
-        // off.style.fontSize="23px";
-        // off.style.color="#24a3b5";
-        // off.style.fontWeight="600";
-        // off.textContent="20% Off";
-        // off.style.paddingBottom="1px"
-
-
-
 
         let Fprice=document.createElement("span")
         let Rprice=document.createElement("span");
@@ -653,44 +596,16 @@ function min40offfxn4(){
 
 
 
-
-
-
-
 function min40offfxnAuto(){
-    console.log('essss');
 
     let btn=document.getElementById("btnL");
   
     btn.classList.add("buttonhover")
    
    
-        console.log(l,m);
-        let dox2=document.getElementById('display3')
-  
-    //   l = l + 1;
-    //   m = m + 1;
-    //   if(l<=4){
-    //     dox2.innerHTML="";
+      let dox2=document.getElementById('display3')
     
       for (let i = 0; i < 5; i++) {
-
-       
-        // let price=document.createElement("p");
-        // price.style.fontFamily="Roboto, Arial, Helvetica, sans-serif";
-        // price.style.fontSize="20px";
-        // price.style.lineHeight="20px";
-        // price.style.color="#212121";
-        // price.style.fontWeight="600"
-        // price.textContent=NAprice[i];
-
-
-        // let off=document.createElement('flag');
-        // off.style.fontSize="23px";
-        // off.style.color="#24a3b5";
-        // off.style.fontWeight="600";
-        // off.textContent="20% Off";
-        // off.style.paddingBottom="1px"
 
         let Fprice=document.createElement("span")
         let Rprice=document.createElement("span");
@@ -716,14 +631,6 @@ function min40offfxnAuto(){
         Rprice.style.fontWeight="500";
 
         priceDiv.append(Fprice,Rprice);
-
-
-
-
-
-
-
-      
            
         var div = document.createElement("div");
         div.style.width = "20%";
@@ -756,6 +663,44 @@ function min40offfxnAuto(){
     let {image,price,discount,title} = JSON.parse(localStorage.getItem("productDetail"));
     let productappend = document.querySelector(".second-box");
     let imgappend = document.querySelector(".box1");
+
+    let newtitle = title.split(" ");
+    console.log(newtitle);
+    for(let i=0; i<newtitle.length; i++){
+      if(newtitle[i] == "Apple"){
+        document.querySelector(".brandofproduct").textContent = `: ${newtitle[i]}`;
+      }
+      if(newtitle[i] == "iPhone"){
+        document.querySelector(".brandofproduct").textContent = `: ${newtitle[i]}`;
+      }
+      if(newtitle[i] == "iphone"){
+        document.querySelector(".brandofproduct").textContent = `: ${newtitle[i]}`;
+      }
+      if(newtitle[i] == "VZ"){
+        document.querySelector(".brandofproduct").textContent = `: ${newtitle[i]}`;
+      }
+      if(newtitle[i] == "Vizio"){
+        document.querySelector(".brandofproduct").textContent = `: ${newtitle[i]}`;
+      }
+      if(newtitle[i] == "Itel"){
+        document.querySelector(".brandofproduct").textContent = `: ${newtitle[i]}`;
+      }
+      if(newtitle[i] == "Micromax"){
+        document.querySelector(".brandofproduct").textContent = `: ${newtitle[i]}`;
+      }
+      if(newtitle[i] == "Vivo"){
+        document.querySelector(".brandofproduct").textContent = `: ${newtitle[i]}`;
+      }
+      if(newtitle[i] == "Rolecto"){
+        document.querySelector(".brandofproduct").textContent = `: ${newtitle[i]}`;
+      }
+      if(newtitle[i] == "Redmi"){
+        document.querySelector(".brandofproduct").textContent = `: ${newtitle[i]}`;
+      }
+      if(newtitle[i] == "Tecno"){
+        document.querySelector(".brandofproduct").textContent = `: ${newtitle[i]}`;
+      }
+    }
 
     addproduct();
 
@@ -912,6 +857,7 @@ function min40offfxnAuto(){
 
         productappend.innerHTML = x;
         imgappend.innerHTML = y;
+        document.getElementById("bottom").textContent = title;
     }
 
 
