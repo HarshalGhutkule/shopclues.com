@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="select_address.css" />
+  </head>
+  <body>
+    <div class="nav"></div>
+    <div class="edit_address">
+      <h2>Edit Address</h2>
+      <form class="select_address">
+        <div class="height_div">
+          <input type="text" placeholder="* Pincode" />
+          <br>
+          <span>Please enter valid pincode of 6 digits</span>
+          <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+        </div>
+
+        <div class="height_div double_up span_sider">
+          <input type="text" placeholder="* City" />
+          <input type="text" placeholder="* State" />
+          <div>
+            <span>Please enter your city </span>
+            <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+            <span style="margin-left: 210px;">Please enter your state</span>
+            <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+          </div>
+        </div>
+
+        <div class="height_div double_up">
+          <input type="text" placeholder="* Name" />
+          <input type="text" placeholder="* Phone Number" />
+          <div>
+            <span>Please enter your name </span>
+            <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+            <span style="margin-left: 200px;">Please enter valid 10 digit mobile number</span>
+            <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+          </div>
+        </div>
+
+        <div class="height_div double_up">
+          <input type="text" placeholder="* House/Plot No" />
+          <input type="text" placeholder="Street/Locality/Area/Landmark" />
+          <div>
+            <span>Please enter your address</span>
+            <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+          </div>
+        </div>
+
+        <div class="height_div">
+          <input type="text" placeholder="GSTIN" />
+        </div>
+
+        <div class="save_btn">
+            <span>Address Type</span>
+    
+            <input type="radio" name="drone" value=home" checked />
+            <label style="font-size: 20px;" for=home">Home</label>
+    
+            <input type="radio" name="drone" value="office" />
+            <label style="font-size: 20px;" for="office">Office</label>
+    
+            <input type="radio" name="drone" value="other" />
+            <label style="font-size: 20px;" for="other">Other</label>
+          </div>
+
+          <button class="savecont">Save & Continue</button>
+      </form>
+      
+    </div>
+  </body>
+</html>

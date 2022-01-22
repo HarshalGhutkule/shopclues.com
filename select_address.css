@@ -1,0 +1,73 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+body {
+  background-color: #eef6f9;
+}
+.nav {
+  background-color: #fff;
+  height: 100px;
+  border: 2px solid rebeccapurple;
+}
+.edit_address {
+  /* border: 2px solid rebeccapurple; */
+  width: 95%;
+  height: 760px;
+  margin: auto;
+  margin-top: 20px;
+}
+.edit_address span {
+  color: red;
+}
+.edit_address h2 {
+  color: #363636;
+  margin-top: 30px;
+  margin-left: 20px;
+  line-height: 26px;
+  font-size: 18px;
+}
+.height_div {
+  height: 100px;
+}
+.height_div input {
+  border: none;
+  border-bottom: 1px solid gray;
+  height: 30px;
+  width: 660px;
+  margin-left: 20px;
+  background-color: #eef6f9;
+  margin-top: 40px;
+}
+.height_div input:focus {
+  outline: none;
+}
+.double_up input {
+  width: 310px;
+}
+.double_up input:nth-child(2) {
+  margin-left: 37px;
+}
+.height_div span {
+  margin-left: 20px;
+}
+.save_btn {
+  margin-top: 30px;
+  margin-left: 20px;
+}
+.save_btn span {
+  font-size: 20px;
+  color: black;
+}
+.save_btn input {
+  margin-left: 20px;
+}
+.savecont {
+  width: 200px;
+  height: 60px;
+  border-radius: 5px;
+  color: white;
+  background-color: #ff6160;
+  margin-left: 500px;
+  margin-top: 20px;
+}
