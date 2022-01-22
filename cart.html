@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="cart.css" />
+</head>
+<body>
+    <div class="box0">
+        <span>
+            <a class="left_arrow">&#8592;</a>
+            <img
+            class="shopclues"
+            src="https://images.shopclues.com/images/ui/shopclues_logo@2x.png"
+            alt="shopclues"/>
+        </span>
+    </div>
+    <div class="container-1">
+            <h2 class="heading">My Cart ( 1 Item )</h2>
+            <p class="coupon">Congrats! You are eligible for Flat Rs 100 off on Prepaid orders with minimum cart value of Rs 1000. Use coupon code PREPAID100.Limit one coupon at a time..</p>
+            <div class="box1">
+                <div class="img">
+                    <img
+                    class="small-img"
+                    src="https://cdn.shopclues.com/images1/thumbnails/113050/320/320/151942655-113050213-1612082567.jpg"
+                    alt="mobile phone"/>
+                </div>
+                <div class="text">
+                    <span class="box1-1">
+                        <p class="product">Itel Vision1 Pro (Ocean Blue, 32 GB) (2 GB RAM)</p>
+                        <p  onclick="subs()" id="minus">-</p><p id="number">1</p><p  onclick="add()" class="plus">+</p>
+                        <p class="price">Price :</p>
+                        <p class="rate">Rs 7490</p>
+                        <p  id="money">Rs 7490</p>
+                    </span>
+                    <span class="box1-2">
+                        <p class="cod">COD not applicable</p>
+                        <p class="remove">Remove</p>
+                        <p class="fee">Shipping Fee :</p>
+                        <p class="free">FREE</p>
+                        <p class="tax">Inclusive of all the applicable taxes</p>
+                    </span>
+                </div>
+            </div>
+    </div>
+    <div class="container-2">
+        <div class="first-box">
+            <div id="pincode"> 
+            <div class="first-1">
+                <span>
+                    <img class="image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8bliPHslbHZ4QJutmOC9EoCfLcSqnSYc5BX88AU1BsHJfcr-7hFWqbh3CewWNbE9kcH0&usqp=CAU" alt=""/>
+                    <p class="delivery">Delivery pincode</p>
+                </span>
+            </div>
+            <div class="first-2">
+                <span>
+                    <input id="pc" class="pincode" type="number" placeholder="Enter your pincode">
+                    <button onclick="pincodeChange()" class="submit">Submit</button>
+                </span>
+            </div>
+        </div>
+           
+        </div>
+        <div class="third-box">
+            <span class="spanning">
+                <p class="total">Total</p>
+                <p id="rs">Rs 7490</p>
+            </span>
+            <span class="spanning">
+                <h3 class="totals">Grand Total</h3>
+                <h3 id="amount">Rs 7490</h3>
+            </span>
+            <p class="taxes">Inclusive of all the applicable taxes</p>
+            <button class="place">Place Order</button>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+
+var count=1;
+let num=document.getElementById("number");
+
+    function add(){
+        count++;
+       num.textContent=count;
+       let totalPrice=document.getElementById("money");
+        totalPrice.textContent=count*7490;
+        let grandT=document.getElementById("amount");
+        grandT.textContent=count*7490;
+
+        let total=document.getElementById("rs");
+        total.textContent=count*7490
+    }
+    function subs(){
+        if(count>=2){ 
+        count--;
+        num.textContent=count;
+        let totalPrice=document.getElementById("money");
+        totalPrice.textContent=count*7490;
+        let grandT=document.getElementById("amount");
+        grandT.textContent=count*7490;
+
+        let total=document.getElementById("rs");
+        total.textContent=count*7490;
+    }
+    }
+    function pincodeChange(){
+        let inPin=document.getElementById("pc").value;
+        let picode=document.getElementById("pincode");
+        picode.innerHTML="";
+        let div=document.createElement("div");
+        div.style.display="flex";
+        let img=document.createElement("img");
+        img.src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8bliPHslbHZ4QJutmOC9EoCfLcSqnSYc5BX88AU1BsHJfcr-7hFWqbh3CewWNbE9kcH0&usqp=CAU";
+        img.style.height="50px"
+        let div2=document.createElement("div");
+        let del=document.createElement("p");
+        del.textContent="Delivery pincode";
+        let pin=document.createElement("p");
+        pin.textContent=inPin;
+        div2.append(del,pin);
+        div.append(img,div2);
+        picode.append(div);
+    }
+</script>
