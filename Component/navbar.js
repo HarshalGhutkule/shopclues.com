@@ -17,7 +17,7 @@ function navbar(){
         <!-- website logo -->
 
         <div id="logo">
-            <a href="index.html">
+            <a href="/index.html">
                 <img src="https://images.shopclues.com/images/ui/shopclues_logo@2x.png" alt="logo">
             </a>
         </div>
@@ -26,7 +26,7 @@ function navbar(){
 
         <div id="searchBar">
             <span>
-                <input type="text" placeholder="What is on your mind today?" id="getinput">
+                <input type="text" placeholder="Only Mobile Products Available(Search mobiles)" id="getinput">
                 <button class="srch_btn">Search</button>
             </span>
         </div>
@@ -45,7 +45,7 @@ function navbar(){
                     <i class="far fa-heart"></i>
                 </li>
                 <li>
-                    <a href="CartPage.html"><i class="fal fa-shopping-cart" id="showcart"><span id="qty">1</span></i></a>
+                    <a href="./Pages/CartPage.html"><i class="fal fa-shopping-cart" id="showcart"><span id="qty">1</span></i></a>
                     <div class="hover_content1">
                         <div id="quickCart">
                             <div class="nItems">
@@ -931,6 +931,7 @@ function navbar(){
                         <br><br>
                         <input type="submit" value="Login" id="checkdetail">
                         <input type="submit" value="login test" id="login_test">
+                        <p id="message1">Masai user authentication server not available now Please click on login test</p>
                     </form>
                     <h3>Social Login</h3>
                     <button>Continue with Facebook</button>
@@ -947,6 +948,7 @@ function navbar(){
                         <br><br>
                         <input type="submit" value="Register" id="storedetail">
                         <input type="submit" value="Test user" id="Test_user">
+                        <p id="message">Masai user authentication server not available now Please click on Test user</p>
                     </form>
                     <h3>Register With</h3>
                     <button>Continue with Facebook</button>

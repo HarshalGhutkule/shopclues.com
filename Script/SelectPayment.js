@@ -11,7 +11,7 @@
       MM == 04 &&
       YY == 2024 &&
       CVV == 123 &&
-      card_name == "Vipin awadhiya"
+      card_name == "Harshal Ghutkule"
     ) {
       alert("Please wait payment is processing")
       setTimeout(timeout,2000);
@@ -19,7 +19,7 @@
       function timeout(){
         localStorage.setItem("cartData",JSON.stringify(""));
         window.alert("Payment successfull");
-        window.location.href = "index.html";
+        window.location.href = "../index.html";
       }
 
       

@@ -898,7 +898,7 @@ function min40offfxnAuto(){
     checkloc.addEventListener("click",()=>{
         let locationValue = document.getElementById("pincode").value;
         if(locationValue == 421005){
-            document.getElementById("avi").textContent = "Available";
+            document.getElementById("avi").textContent = "Not Available";
             document.getElementById("ship").textContent = "Free Shipping";
             document.getElementById("removezero").textContent = null;
             document.getElementById("delIn2days").textContent = "Tue 25 Jan - Fri 28 Jan";

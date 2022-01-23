@@ -46,7 +46,6 @@ function appendData(){
         locationof.innerHTML = x;
         let grandT=document.getElementById("amount");
         let total=document.getElementById("rs");
-        let totalPrice=document.getElementById("money");
 
         grandT.textContent=`Rs${tt}`;
 
@@ -61,41 +60,55 @@ function appendData(){
             })
         })
         let addof = document.querySelectorAll(".plus");
+    
         
+
         addof.forEach((el)=>{
-            el.addEventListener("click",add.bind(null,price));
-
+            console.log("add",price);
+            el.addEventListener("click",add.bind(null,price,el));
         });
-        let subof = document.querySelectorAll("#minus");
-        subof.forEach((el)=>{
 
-            el.addEventListener("click",subs.bind(null,price));
+        let subof = document.querySelectorAll("#minus");
+
+        subof.forEach((el)=>{
+            console.log("sub",price);
+            el.addEventListener("click",subs.bind(null,price,el));
         })
 
-        var count=1;
-        let num=document.getElementById("number");
+        var count = 1;
 
-        function add(price){
+        function add(priceadded,el){
+
             count++;
-            num.textContent=count;
             
-            totalPrice.textContent=`Rs${count*price}`;
+            let num=el.closest(".box1-1").querySelector("#number");
+            num.textContent=count;
 
-            grandT.textContent=`Rs${count*price}`;
+            let totalPrice=el.closest(".box1-1").querySelector("#money");
+            console.log(el.closest(".box1-1").querySelector("#money"));
+            totalPrice.textContent=`Rs${count*priceadded}`;
 
-            total.textContent=`Rs${count*price}`;
+            grandT.textContent=`Rs${count*priceadded}`;
+
+            total.textContent=`Rs${count*priceadded}`;
 
         }
-        function subs(price){
+
+
+        function subs(priceremove,el){
             if(count>=2){ 
             count--;
+            let num=el.closest(".box1-1").querySelector("#number");
             num.textContent=count;
 
-            totalPrice.textContent=`Rs${count*price}`;
-        
-            grandT.textContent=`Rs${count*price}`;
+            let totalPrice=el.closest(".box1-1").querySelector("#money");
+            console.log(el.closest(".box1-1").querySelector("#money"));
 
-            total.textContent=`Rs${count*price}`;
+            totalPrice.textContent=`Rs${count*priceremove}`;
+        
+            grandT.textContent=`Rs${count*priceremove}`;
+
+            total.textContent=`Rs${count*priceremove}`;
         }
         }
     })

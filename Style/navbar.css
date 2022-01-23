@@ -165,7 +165,7 @@ body {
 .hover_content, .hover_content1 {
     display: none;
     transition: all .2s ease-in-out;
-    top: 105%;
+    top: 100%;
     right: 0%;
     position: absolute;
     z-index: 7;
@@ -580,7 +580,13 @@ h3 {
 
 input:focus {
     outline: none;
-  }
+}
+
+#message, #message1 {
+    font-size: 10px;
+    margin-left: 2%;
+    display: none;
+}
 
 /* scroll top button */
 

@@ -68,7 +68,7 @@ let showResult = () => {
     let input = document.getElementById("getinput").value;
 
     if(input == "mobiles"){
-        window.location.href = "productListPage.html";
+        window.location.href = "ProductListPage.html";
     }
 }
 document.querySelector(".srch_btn").addEventListener("click",showResult);
@@ -184,6 +184,7 @@ async function postData(event){
         catch(err){
             if(err){
                 document.getElementById("Test_user").style.display = "inline-block";
+                document.getElementById("message").style.display = "block";
             }
         }
     }
@@ -251,6 +252,7 @@ async function checkData(event){
     catch(err){
         if(err){
             document.getElementById("login_test").style.display = "inline-block";
+            document.getElementById("message1").style.display = "block";
         }
     }
 }
@@ -271,9 +273,10 @@ let testuserlogin = (event) => {
     }
 }
 
+
 let usernameof = JSON.parse(localStorage.getItem("loginData"));
-console.log(usernameof);
-if(usernameof != ""){
+
+if(usernameof != null && usernameof != ""){
     console.log(usernameof);
     document.getElementById("back").style.display = "none";
     document.getElementById("login_sucess").textContent = usernameof;
@@ -329,49 +332,38 @@ close.addEventListener("click", ()=>{
     document.getElementById("back").style.display = "none";
 })
 
-// function to append cart data to navbar
-
-// a();
-
-// function a(){
-//     let arr = [];
-//     let cart = {
-//         image:"https://images.shopclues.com/images1/thumbnails/84619/320/320/136963262-84619914-1575020674.jpg",
-//         name: "Sunshopping Tan Men Leatherite Pin-Hole Buckle Belt",
-//         price: 159,
-//         qty: 2,
-//     };
-
-//     arr.push(cart);    
-//     localStorage.setItem("cartData", JSON.stringify(arr));
-// }
-
 
 let appendCartdata = () => {
 
-    
-    let location = document.querySelector(".listItem");
-    let quantity = document.querySelector(".nItems");
-    let showonNav = document.getElementById("qty");
-    
     let data = JSON.parse(localStorage.getItem("cartData"));
 
-    let x = "";
+    if(data != null && data != ""){
 
-    data.forEach(({title,image,price},index)=>{
-        x += `<div>
-                <img src="${image}" alt="">
-            </div>
-            <div id="rs">
-                <p>${title}</p>
-                <p>Rs.${price}</p>
-            </div>`
+        let location = document.querySelector(".listItem");
+        let quantity = document.querySelector(".nItems");
+        let showonNav = document.getElementById("qty");
+        
+        
+        let x = "";
 
-        location.innerHTML = x;
-        quantity.innerHTML = `<p>Your Shopping Cart (${index+1} Items)</p>`;
-        showonNav.style.display = "block";
-        showonNav.textContent = index+1;
-    })
-}
+        data.forEach(({title,image,price},index)=>{
+            x += `<div>
+                    <img src="${image}" alt="">
+                </div>
+                <div id="rs">
+                    <p>${title}</p>
+                    <p>Rs.${price}</p>
+                </div>`
+
+            location.innerHTML = x;
+            quantity.innerHTML = `<p>Your Shopping Cart (${index+1} Items)</p>`;
+            showonNav.style.display = "block";
+            showonNav.textContent = index+1;
+        })
+    }
+
+    }
+
     appendCartdata();
+
 }

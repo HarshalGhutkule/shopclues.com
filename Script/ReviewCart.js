@@ -39,33 +39,35 @@ function appendData(){
         let addof = document.querySelectorAll(".plus");
         
         addof.forEach((el)=>{
-            el.addEventListener("click",add.bind(null,price));
+            el.addEventListener("click",add.bind(null,price,el));
         });
         let subof = document.querySelectorAll(".minus");
         subof.forEach((el)=>{
-            el.addEventListener("click",subs.bind(null,price));
+            el.addEventListener("click",subs.bind(null,price,el));
         })
 
         var count=1;
-        let num=document.getElementById("number");
+        
 
-        function add(price){
+        function add(price,el){
             count++;
+            let num=el.closest("#itemD").querySelector("#number");
             num.textContent=count;
             
             totalPrice.textContent=`Rs${count*price}`;
 
-            grandT.textContent=`Rs${count*price-3375}`;
+            grandT.textContent=`Rs${count*price-1375}`;
 
         }
-        function subs(price){
+        function subs(price,el){
             if(count>=2){ 
             count--;
+            let num=el.closest("#itemD").querySelector("#number");
             num.textContent=count;
 
             totalPrice.textContent=`Rs${count*price}`;
         
-            grandT.textContent=`Rs${count*price-3375}`;
+            grandT.textContent=`Rs${count*price-1375}`;
         }
         }
     })

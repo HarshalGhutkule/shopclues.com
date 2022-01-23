@@ -1,5 +1,7 @@
+
+// function to append data
+
 let mobileData = JSON.parse(localStorage.getItem("productData"));
-  console.log(mobileData);
 
   let List_div = document.querySelector("#list_div");
 
@@ -59,6 +61,7 @@ let mobileData = JSON.parse(localStorage.getItem("productData"));
       });
     }
   }
+
   // function for high to low
   let high_price = document.getElementById("high-price");
 
@@ -71,6 +74,7 @@ let mobileData = JSON.parse(localStorage.getItem("productData"));
     });
     appendData(data, List_div);
   }
+
   // function for low to high
 
   let low_price = document.getElementById("low-price");
@@ -84,10 +88,13 @@ let mobileData = JSON.parse(localStorage.getItem("productData"));
     });
     appendData(data, List_div);
   }
+
+
   // function for 2501-5000
   let price_filter = document.getElementById("price-one");
 
   price_filter.addEventListener("click", () => {
+    document.getElementById("price-two").checked = false;
     if (price_filter.checked === true) {
       let data = mobileData.filter((el) => {
         return el.price > 2501 && el.price < 5000;
@@ -100,6 +107,7 @@ let mobileData = JSON.parse(localStorage.getItem("productData"));
   let price_filter2 = document.getElementById("price-two");
 
   price_filter2.addEventListener("click", () => {
+    document.getElementById("price-one").checked = false;
     if (price_filter2.checked === true) {
       let data = mobileData.filter((el) => {
         return el.price > 5000;
@@ -121,6 +129,10 @@ let mobileData = JSON.parse(localStorage.getItem("productData"));
   let discount1 = document.querySelector(".twenty");
 
   discount1.addEventListener("click", () => {
+    document.querySelector(".forty").checked = false;
+    document.querySelector(".sixty").checked = false;
+    document.querySelector(".eighty").checked = false;
+    document.querySelector(".aboveAll").checked = false;
     if (discount1.checked === true) {
       let data = mobileData.filter((el) => {
         return el.discount <= 20;
@@ -133,6 +145,10 @@ let mobileData = JSON.parse(localStorage.getItem("productData"));
   let discount2 = document.querySelector(".forty");
 
   discount2.addEventListener("click", () => {
+    document.querySelector(".twenty").checked = false;
+    document.querySelector(".sixty").checked = false;
+    document.querySelector(".eighty").checked = false;
+    document.querySelector(".aboveAll").checked = false;
     if (discount2.checked === true) {
       let data = mobileData.filter((el) => {
         return el.discount >= 21 && el.discount <= 40;
@@ -146,6 +162,10 @@ let mobileData = JSON.parse(localStorage.getItem("productData"));
   let discount3 = document.querySelector(".sixty");
 
   discount3.addEventListener("click", () => {
+    document.querySelector(".twenty").checked = false;
+    document.querySelector(".forty").checked = false;
+    document.querySelector(".eighty").checked = false;
+    document.querySelector(".aboveAll").checked = false;
     if (discount3.checked === true) {
       let data = mobileData.filter((el) => {
         return el.discount >= 41 && el.discount <= 60;
@@ -159,6 +179,10 @@ let mobileData = JSON.parse(localStorage.getItem("productData"));
   let discount4 = document.querySelector(".eighty");
 
   discount4.addEventListener("click", () => {
+    document.querySelector(".twenty").checked = false;
+    document.querySelector(".forty").checked = false;
+    document.querySelector(".sixty").checked = false;
+    document.querySelector(".aboveAll").checked = false;
     if (discount4.checked === true) {
       let data = mobileData.filter((el) => {
         return el.discount >= 61 && el.discount <= 80;
@@ -173,6 +197,10 @@ let mobileData = JSON.parse(localStorage.getItem("productData"));
   let discount5 = document.querySelector(".aboveAll");
 
   discount5.addEventListener("click", () => {
+    document.querySelector(".twenty").checked = false;
+    document.querySelector(".forty").checked = false;
+    document.querySelector(".sixty").checked = false;
+    document.querySelector(".eighty").checked = false;
     if (discount5.checked === true) {
       let data = mobileData.filter((el) => {
         return el.discount > 80;
