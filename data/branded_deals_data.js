@@ -86,11 +86,7 @@ var branded_deal = [
     p2: "999",
     p3: "266",
     dis: "73% off",
-  },
-  {
-    img: "https://cdn.shopclues.com/images/banners/view_all_demo.jpg",
-    name: "View All",
-  },
+  }
 ];
 
 branded_deal.map(function (data) {
