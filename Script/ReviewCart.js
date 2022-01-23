@@ -32,7 +32,7 @@ function appendData(){
         let grandT=document.getElementById("gTotal");
         let totalPrice=document.getElementById("priceOf");
 
-        grandT.textContent=`Rs${tt-3375}`;
+        grandT.textContent=`Rs${tt-1375}`;
 
         totalPrice.textContent=`Rs${tt}`;
 
